@@ -8,23 +8,20 @@
 .header-container2 {
   @apply flex justify-between items-center w-full;
 }
+/* header-section1 */
 .header-section1 {
-  @apply flex justify-between items-center w-[20%];
-}
-.header-section2 {
   @apply flex justify-between items-center w-[20%] relative;
 }
-
-.header-section1 .icon:hover {
-  @apply cursor-pointer;
+.header-section1 .search {
+  @apply rounded-md p-1 outline-none bg-[#23293c] placeholder:text-xs placeholder:text-gray-400;
 }
-
-.header-section2 .search {
-  @apply rounded-md p-1 outline-none bg-[#23293c];
-}
-.header-section2 .search::placeholder {
-  @apply text-xs text-gray-400;
-}
-.header-section2 .icon-btn {
+.header-section1 .icon-btn {
   @apply flex justify-center items-center absolute right-7;
+}
+/* header-section2 */
+.header-section2 {
+  @apply flex justify-end items-center gap-3 w-[20%];
+}
+.header-section2 .icon {
+  @apply hover:cursor-pointer;
 }
