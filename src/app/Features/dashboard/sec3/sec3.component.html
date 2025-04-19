@@ -1,1 +1,78 @@
-<p>sec3 works!</p>
+<section class="dashboard-section3">
+  <div class="linechartSection">
+    <div class="head">
+      <div class="data">
+        <div class="title">Revenue Generated</div>
+        <div class="number">$59,342.32</div>
+      </div>
+      <div class="download">
+        <ng-icon name="solarDownloadMinimalistic" />
+      </div>
+    </div>
+    <div class="linechart">
+      <ngx-charts-line-chart
+        [view]="[790, 150]"
+        [scheme]="colorScheme"
+        [legend]="legend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxis]="xAxis"
+        [yAxis]="yAxis"
+        [timeline]="timeline"
+        [results]="multi"
+        [showGridLines]="false"
+        [roundDomains]="true"
+        [legendTitle]="''"
+        [autoScale]="true"
+        [curve]="curve"
+        (select)="onSelect($event)"
+        (activate)="onActivate($event)"
+        (deactivate)="onDeactivate($event)"
+      >
+      </ngx-charts-line-chart>
+    </div>
+  </div>
+  <div class="transactions">
+    <div class="dataRow">Recent Transactions</div>
+    <div class="dataRow">
+      <div class="name">
+        <div class="code">014e4dsa</div>
+        <div class="name">johndoe</div>
+      </div>
+      <div class="date">19-04-2025</div>
+      <div class="price">43.95$</div>
+    </div>
+    <div class="dataRow">
+      <div class="name">
+        <div class="code">014e4dsa</div>
+        <div class="name">johndoe</div>
+      </div>
+      <div class="date">19-04-2025</div>
+      <div class="price">43.95$</div>
+    </div>
+    <div class="dataRow">
+      <div class="name">
+        <div class="code">014e4dsa</div>
+        <div class="name">johndoe</div>
+      </div>
+      <div class="date">19-04-2025</div>
+      <div class="price">43.95$</div>
+    </div>
+    <div class="dataRow">
+      <div class="name">
+        <div class="code">014e4dsa</div>
+        <div class="name">johndoe</div>
+      </div>
+      <div class="date">19-04-2025</div>
+      <div class="price">43.95$</div>
+    </div>
+    <div class="dataRow">
+      <div class="name">
+        <div class="code">014e4dsa</div>
+        <div class="name">johndoe</div>
+      </div>
+      <div class="date">19-04-2025</div>
+      <div class="price">43.95$</div>
+    </div>
+  </div>
+</section>

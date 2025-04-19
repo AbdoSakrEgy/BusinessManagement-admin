@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dashboard-section3 {
+  @apply flex justify-between items-start gap-3 w-full text-xs;
+}
+/* linechartSection */
+.dashboard-section3 .linechartSection {
+  @apply flex flex-col gap-3 p-5 w-[70%] h-60 bg-[#23293c];
+}
+.dashboard-section3 .linechartSection .head {
+  @apply flex justify-between items-start w-full;
+}
+.dashboard-section3 .linechartSection .data {
+  @apply flex flex-col;
+}
+.dashboard-section3 .linechartSection .title {
+  @apply text-xs text-white;
+}
+.dashboard-section3 .linechartSection .number {
+  @apply text-lg font-medium text-[#4cceac];
+}
+.dashboard-section3 .linechartSection .download {
+  @apply text-2xl text-[#4cceac];
+}
+.dashboard-section3 .linechart {
+  @apply text-white;
+}
+::ng-deep ngx-charts-line-chart .x.axis text {
+  fill: white;
+}
+
+::ng-deep ngx-charts-line-chart .y.axis text {
+  fill: white;
+}
+
+/* transactions */
+.dashboard-section3 .transactions {
+  @apply flex flex-col gap-1 w-[30%] overflow-auto h-60 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-white overflow-y-scroll;
+}
+.dashboard-section3 .dataRow {
+  @apply flex justify-between items-center p-3 rounded-sm w-full bg-[#23293c];
+}
+.dashboard-section3 .name {
+  @apply flex flex-col;
+}
+.dashboard-section3 .name .code {
+  @apply text-[#4cceac];
+}
+.dashboard-section3 .name .name {
+  @apply text-gray-400;
+}
+.dashboard-section3 .date {
+  @apply text-gray-400;
+}
+.dashboard-section3 .price {
+  @apply flex justify-center items-center p-2 rounded-md text-white bg-[#4cceac];
+}
