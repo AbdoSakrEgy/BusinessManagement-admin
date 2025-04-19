@@ -27,14 +27,44 @@ import { Color, ScaleType } from '@swimlane/ngx-charts';
   ],
 })
 export class Sec2Component {
-  single: any[] = [
+  single1: any[] = [
     {
-      name: 'Germany',
-      value: 8940000,
+      name: 'Male',
+      value: 70,
     },
     {
-      name: 'USA',
-      value: 5000000,
+      name: 'Female',
+      value: 40,
+    },
+  ];
+  single2: any[] = [
+    {
+      name: 'Male',
+      value: 10,
+    },
+    {
+      name: 'Female',
+      value: 90,
+    },
+  ];
+  single3: any[] = [
+    {
+      name: 'Male',
+      value: 30,
+    },
+    {
+      name: 'Female',
+      value: 80,
+    },
+  ];
+  single4: any[] = [
+    {
+      name: 'Male',
+      value: 50,
+    },
+    {
+      name: 'Female',
+      value: 50,
     },
   ];
   view: any[] = [700, 400];
