@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dashboard-section2 {
+  @apply flex justify-between items-center gap-5 w-full;
+}
+.dashboard-section2 .statBlock {
+  @apply flex justify-between items-stretch pb-5 pl-5 pt-1 pr-1 rounded-sm w-1/4 bg-[#23293c];
+}
+.dashboard-section2 .numBlock {
+  @apply flex flex-col justify-end gap-1;
+}
+.dashboard-section2 .icon {
+  @apply text-xl text-[#4cceac];
+}
+.dashboard-section2 .num {
+  @apply text-sm;
+}
+.dashboard-section2 .title {
+  @apply text-xs text-[#4cceac];
+}
+.dashboard-section2 .graphBlock {
+  @apply flex flex-col justify-start;
+}
+.dashboard-section2 .piechart {
+  @apply flex;
+}
+.dashboard-section2 .ratio {
+  @apply text-xs text-center text-[#4cceac];
+}

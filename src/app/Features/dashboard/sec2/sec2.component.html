@@ -1,0 +1,110 @@
+<section class="dashboard-section2">
+  <!-- card 1 -->
+  <div class="statBlock">
+    <div class="numBlock">
+      <ng-icon name="matMailOutline" class="icon" />
+      <div class="num">12,361</div>
+      <div class="title">Emails sent</div>
+    </div>
+    <div class="graphBlock">
+      <div class="piechart">
+        <ngx-charts-pie-chart
+          [view]="[70, 70]"
+          [results]="single"
+          [gradient]="true"
+          [legend]="false"
+          [labels]="false"
+          [scheme]="colorScheme"
+          [doughnut]="true"
+          [arcWidth]="0.25"
+          (select)="onSelect($event)"
+          (activate)="onActivate($event)"
+          (deactivate)="onDeactivate($event)"
+        >
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="ratio">+14%</div>
+    </div>
+  </div>
+  <!-- card 2 -->
+  <div class="statBlock">
+    <div class="numBlock">
+      <ng-icon name="solarCalculator" class="icon" />
+      <div class="num">431,225</div>
+      <div class="title">Sales Obtained</div>
+    </div>
+    <div class="graphBlock">
+      <div class="piechart">
+        <ngx-charts-pie-chart
+          [view]="[70, 70]"
+          [results]="single"
+          [gradient]="true"
+          [legend]="false"
+          [labels]="false"
+          [scheme]="colorScheme"
+          [doughnut]="true"
+          [arcWidth]="0.25"
+          (select)="onSelect($event)"
+          (activate)="onActivate($event)"
+          (deactivate)="onDeactivate($event)"
+        >
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="ratio">+21%</div>
+    </div>
+  </div>
+  <!-- card 3 -->
+  <div class="statBlock">
+    <div class="numBlock">
+      <ng-icon name="solarUserPlus" class="icon" />
+      <div class="num">32,441</div>
+      <div class="title">New Clients</div>
+    </div>
+    <div class="graphBlock">
+      <div class="piechart">
+        <ngx-charts-pie-chart
+          [view]="[70, 70]"
+          [results]="single"
+          [gradient]="true"
+          [legend]="false"
+          [labels]="false"
+          [scheme]="colorScheme"
+          [doughnut]="true"
+          [arcWidth]="0.25"
+          (select)="onSelect($event)"
+          (activate)="onActivate($event)"
+          (deactivate)="onDeactivate($event)"
+        >
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="ratio">+5%</div>
+    </div>
+  </div>
+  <!-- card 4 -->
+  <div class="statBlock">
+    <div class="numBlock">
+      <ng-icon name="matTraffic" class="icon" />
+      <div class="num">1,325,134</div>
+      <div class="title">Traffic Received</div>
+    </div>
+    <div class="graphBlock">
+      <div class="piechart">
+        <ngx-charts-pie-chart
+          [view]="[70, 70]"
+          [results]="single"
+          [gradient]="true"
+          [legend]="false"
+          [labels]="false"
+          [scheme]="colorScheme"
+          [doughnut]="true"
+          [arcWidth]="0.25"
+          (select)="onSelect($event)"
+          (activate)="onActivate($event)"
+          (deactivate)="onDeactivate($event)"
+        >
+        </ngx-charts-pie-chart>
+      </div>
+      <div class="ratio">+43%</div>
+    </div>
+  </div>
+</section>

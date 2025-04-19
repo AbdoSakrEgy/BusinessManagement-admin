@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dashboard-container1 {
+  @apply flex justify-center items-center w-full p-3;
+}
+.dashboard-container2 {
+  @apply flex flex-col w-full gap-5;
+}
+
+/* dashboard-section1 */
+.dashboard-section1 {
+  @apply flex justify-between items-end w-full;
+}
+.dashboard-section1 .title {
+  @apply text-4xl font-bold;
+}
+.dashboard-section1 .msg {
+  @apply flex flex-col gap-3;
+}
+.dashboard-section1 .welcome {
+  @apply text-xs text-[#4cceac];
+}
+.dashboard-section1 .DWReports {
+  @apply flex justify-center items-center gap-2 px-5 py-2 rounded-sm font-bold text-sm bg-[#494d9b];
+}
+/* dashboard-section2 */
+/* dashboard-section3 */
+/* dashboard-section4 */

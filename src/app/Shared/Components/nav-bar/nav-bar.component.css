@@ -23,7 +23,7 @@
   @apply rounded-full overflow-hidden w-24 h-24 mb-5;
 }
 .navbar-section2 .name {
-  @apply text-lg font-bold;
+  @apply text-xl font-bold;
 }
 .navbar-section2 .role {
   @apply text-base text-[#4cceac];
