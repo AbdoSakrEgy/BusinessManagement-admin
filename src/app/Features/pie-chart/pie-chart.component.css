@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pieChart-container1 {
+  @apply flex justify-center items-center w-full p-3;
+}
+.pieChart-container2 {
+  @apply flex flex-col w-full gap-5;
+}
+
+/* pieChart-section1 */
+.pieChart-section1 {
+  @apply flex justify-between items-end w-full;
+}
+.pieChart-section1 .title {
+  @apply text-4xl font-bold;
+}
+.pieChart-section1 .msg {
+  @apply flex flex-col gap-3;
+}
+.pieChart-section1 .welcome {
+  @apply text-xs text-[#4cceac];
+}

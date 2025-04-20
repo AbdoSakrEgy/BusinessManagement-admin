@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.barChart-container1 {
+  @apply flex justify-center items-center w-full h-[95%] p-3;
+}
+.barChart-container2 {
+  @apply flex flex-col w-full h-full gap-5;
+}
+
+/* barChart-section1 */
+.barChart-section1 {
+  @apply flex justify-between items-end w-full;
+}
+.barChart-section1 .title {
+  @apply text-4xl font-bold;
+}
+.barChart-section1 .msg {
+  @apply flex flex-col gap-3;
+}
+.barChart-section1 .welcome {
+  @apply text-xs text-[#4cceac];
+}
+/* barChart-section2 */
+.barChart-section2 {
+  @apply flex h-full;
+}
+::ng-deep ngx-charts-bar-vertical-stacked g.x.axis text {
+  fill: white; /* X axis label color */
+  font-size: 14px;
+}
+
+::ng-deep ngx-charts-bar-vertical-stacked g.y.axis text {
+  fill: white; /* Y axis label color */
+  font-size: 14px;
+}

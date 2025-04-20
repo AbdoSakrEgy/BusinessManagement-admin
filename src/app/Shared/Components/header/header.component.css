@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .header-container1 {
-  @apply flex justify-center items-center w-full p-3;
+  @apply flex justify-center items-center w-full h-[5%] p-3;
 }
 .header-container2 {
   @apply flex justify-between items-center w-full;
@@ -13,10 +13,10 @@
   @apply flex justify-between items-center w-[20%] relative;
 }
 .header-section1 .search {
-  @apply rounded-md p-1 outline-none bg-[#23293c] placeholder:text-xs placeholder:text-gray-400;
+  @apply rounded-md p-1 outline-none w-full bg-[#23293c] placeholder:text-xs placeholder:text-gray-400;
 }
 .header-section1 .icon-btn {
-  @apply flex justify-center items-center absolute right-7;
+  @apply flex justify-center items-center absolute right-3;
 }
 /* header-section2 */
 .header-section2 {

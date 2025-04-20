@@ -12,5 +12,5 @@
   @apply w-[20%];
 }
 .section2 {
-  @apply w-[80%];
+  @apply w-[80%] h-[100vh];
 }

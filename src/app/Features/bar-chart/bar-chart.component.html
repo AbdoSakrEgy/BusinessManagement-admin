@@ -1,1 +1,25 @@
-<p>bar-chart works!</p>
+<main class="barChart-container1">
+  <main class="barChart-container2">
+    <section class="barChart-section1">
+      <div class="msg">
+        <div class="title">Bar Chart</div>
+        <P class="welcome">Simple Bar Chart</P>
+      </div>
+    </section>
+    <div class="barChart-section2">
+      <ngx-charts-bar-vertical-stacked
+        [scheme]="colorScheme"
+        [results]="multi"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [animations]="animations"
+        (select)="onSelect($event)"
+      >
+      </ngx-charts-bar-vertical-stacked>
+    </div>
+  </main>
+</main>

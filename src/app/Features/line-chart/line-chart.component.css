@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.lineChart-container1 {
+  @apply flex justify-center items-center w-full p-3;
+}
+.lineChart-container2 {
+  @apply flex flex-col w-full gap-5;
+}
+
+/* lineChart-section1 */
+.lineChart-section1 {
+  @apply flex justify-between items-end w-full;
+}
+.lineChart-section1 .title {
+  @apply text-4xl font-bold;
+}
+.lineChart-section1 .msg {
+  @apply flex flex-col gap-3;
+}
+.lineChart-section1 .welcome {
+  @apply text-xs text-[#4cceac];
+}
