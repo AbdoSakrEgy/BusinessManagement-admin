@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .pieChart-container1 {
-  @apply flex justify-center items-center w-full p-3;
+  @apply flex justify-center items-center w-full h-[90%]  p-3;
 }
 .pieChart-container2 {
-  @apply flex flex-col w-full gap-5;
+  @apply flex flex-col w-full h-full gap-5;
 }
 
 /* pieChart-section1 */
@@ -21,4 +21,13 @@
 }
 .pieChart-section1 .welcome {
   @apply text-xs text-[#4cceac];
+}
+/* pieChart-section2 */
+.pieChart-section2 {
+  @apply flex h-full;
+}
+::ng-deep .pie-label {
+  fill: #ffffff; /* Replace with your desired label color */
+  font-size: 14px;
+  font-weight: bold;
 }

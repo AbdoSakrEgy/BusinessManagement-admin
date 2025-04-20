@@ -6,6 +6,22 @@
         <P class="welcome">Simple Pie Chart</P>
       </div>
     </section>
-    <div class="pieChart-section2"></div>
+    <div class="pieChart-section2">
+      <ngx-charts-pie-chart
+        [scheme]="colorScheme"
+        [results]="single"
+        [gradient]="true"
+        [legend]="true"
+        [labels]="true"
+        [doughnut]="true"
+        [arcWidth]="0.55"
+        [legendPosition]="legendPosition"
+        [legendTitle]="''"
+        (select)="onSelect($event)"
+        (activate)="onActivate($event)"
+        (deactivate)="onDeactivate($event)"
+      >
+      </ngx-charts-pie-chart>
+    </div>
   </main>
 </main>
