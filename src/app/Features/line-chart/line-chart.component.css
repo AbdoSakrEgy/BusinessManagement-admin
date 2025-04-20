@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .lineChart-container1 {
-  @apply flex justify-center items-center w-full p-3;
+  @apply flex justify-center items-center w-full h-[90%] p-3;
 }
 .lineChart-container2 {
-  @apply flex flex-col w-full gap-5;
+  @apply flex flex-col w-full h-full gap-5;
 }
 
 /* lineChart-section1 */
@@ -21,4 +21,15 @@
 }
 .lineChart-section1 .welcome {
   @apply text-xs text-[#4cceac];
+}
+/* lineChart-section2 */
+.lineChart-section2 {
+  @apply flex h-full;
+}
+::ng-deep ngx-charts-line-chart .x.axis text {
+  fill: white;
+}
+
+::ng-deep ngx-charts-line-chart .y.axis text {
+  fill: white;
 }

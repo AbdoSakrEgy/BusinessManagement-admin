@@ -8,7 +8,7 @@ import { Color, ScaleType } from '@swimlane/ngx-charts';
 @Component({
   selector: 'app-bar-chart',
   standalone: true,
-  imports: [AsyncPipe, NgxChartsModule],
+  imports: [ NgxChartsModule],
   templateUrl: './bar-chart.component.html',
   styleUrl: './bar-chart.component.css',
 })

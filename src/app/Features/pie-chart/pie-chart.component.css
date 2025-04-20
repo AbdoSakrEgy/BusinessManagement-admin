@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .pieChart-container1 {
-  @apply flex justify-center items-center w-full h-[90%]  p-3;
+  @apply flex justify-center items-center w-full h-[90%] p-3;
 }
 .pieChart-container2 {
   @apply flex flex-col w-full h-full gap-5;
