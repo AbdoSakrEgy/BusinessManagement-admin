@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 .dashboard-section2 {
-  @apply flex justify-between items-center gap-5 w-full;
+  @apply flex justify-between items-center gap-5 w-full h-fit;
 }
+/* statBlock */
 .dashboard-section2 .statBlock {
   @apply flex justify-between items-stretch pb-5 pl-5 pt-1 pr-1 rounded-sm w-1/4 bg-[#23293c];
 }
@@ -20,6 +21,7 @@
 .dashboard-section2 .title {
   @apply text-xs text-[#4cceac];
 }
+/* graphBlock */
 .dashboard-section2 .graphBlock {
   @apply flex flex-col justify-start;
 }

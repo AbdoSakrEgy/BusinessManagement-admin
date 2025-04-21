@@ -6,7 +6,7 @@
   @apply flex justify-center items-center w-full h-[5%] p-3;
 }
 .header-container2 {
-  @apply flex justify-between items-center w-full;
+  @apply flex justify-between items-center w-full h-full;
 }
 /* header-section1 */
 .header-section1 {

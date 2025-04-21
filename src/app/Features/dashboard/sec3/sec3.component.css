@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .dashboard-section3 {
-  @apply flex justify-between items-start w-full text-xs;
+  @apply flex justify-between items-start w-full h-fit text-xs;
 }
 /* linechartSection */
 .dashboard-section3 .linechartSection {
@@ -37,7 +37,7 @@
 
 /* transactions */
 .dashboard-section3 .transactions {
-  @apply flex flex-col gap-1 w-[33%] overflow-auto h-60 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-white overflow-y-scroll;
+  @apply flex flex-col gap-1 w-[33%] overflow-auto h-60;
 }
 .dashboard-section3 .dataRow {
   @apply flex justify-between items-center p-3 rounded-sm w-full bg-[#23293c];

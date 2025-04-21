@@ -3,15 +3,14 @@
 @tailwind utilities;
 
 .dashboard-container1 {
-  @apply flex justify-center items-center w-full p-3;
+  @apply flex justify-center items-center w-full h-full p-3;
 }
 .dashboard-container2 {
-  @apply flex flex-col w-full gap-5;
+  @apply flex flex-col gap-3 w-full h-full;
 }
-
 /* dashboard-section1 */
 .dashboard-section1 {
-  @apply flex justify-between items-end w-full;
+  @apply flex justify-between items-end w-full h-fit;
 }
 .dashboard-section1 .title {
   @apply text-4xl font-bold;

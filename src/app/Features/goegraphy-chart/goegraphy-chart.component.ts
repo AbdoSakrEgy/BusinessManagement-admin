@@ -27,7 +27,7 @@ export class GoegraphyChartComponent {
         overrides: {
           common: {
             background: {
-              fill: '#141b2d', // Replace with your desired background color
+              fill: '#23293c', // Replace with your desired background color
             },
           },
         },

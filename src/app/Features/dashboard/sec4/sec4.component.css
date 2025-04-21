@@ -3,44 +3,13 @@
 @tailwind utilities;
 
 .dashboard-section4 {
-  @apply flex justify-between items-stretch w-full bg-[#141b2d];
-}
-/* pieChart */
-.dashboard-section4 .pieChart {
-  @apply flex flex-col items-center w-[33%] gap-3 p-5 rounded-sm bg-[#23293c] text-white;
-}
-.dashboard-section4 .pieChart .head {
-  @apply flex w-full text-left;
-}
-.dashboard-section4 .pieChart .body {
-  @apply flex;
-}
-.dashboard-section4 .pieChart .footer {
-  @apply flex flex-col text-xs;
-}
-.dashboard-section4 .pieChart .info1 {
-  @apply text-center text-[#4cceac];
-}
-.dashboard-section4 .pieChart .info2 {
-  @apply text-center;
+  @apply flex justify-between items-stretch w-full h-full gap-1 bg-[#141b2d];
 }
 /* barChart */
 .dashboard-section4 .barChart {
-  @apply flex flex-col items-center w-[33%] gap-3 p-5 rounded-sm bg-[#23293c] text-white;
-}
-.dashboard-section4 .barChart .head {
-  @apply flex;
-}
-.dashboard-section4 .barChart .body {
-  @apply flex;
+  @apply w-[33%] bg-[#23293c] text-white;
 }
 /* geogChart */
 .dashboard-section4 .geogChart {
-  @apply flex flex-col items-center w-[33%] gap-3 p-5 rounded-sm bg-[#23293c] text-white;
-}
-.dashboard-section4 .geogChart .head {
-  @apply flex;
-}
-.dashboard-section4 .geogChart .body {
-  @apply flex;
+  @apply w-[66.5%] bg-[#23293c] text-white;
 }
