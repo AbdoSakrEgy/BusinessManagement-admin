@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .geographyChart-container1 {
-  @apply flex justify-center items-center w-full p-3;
+  @apply flex justify-center items-center w-full h-[95%] p-3;
 }
 .geographyChart-container2 {
-  @apply flex flex-col w-full gap-5;
+  @apply flex flex-col w-full h-full gap-5;
 }
 
 /* geographyChart-section1 */
@@ -21,4 +21,8 @@
 }
 .geographyChart-section1 .welcome {
   @apply text-xs text-[#4cceac];
+}
+/* geographyChart-section2 */
+.geographyChart-section2 {
+  @apply flex w-full h-full;
 }
