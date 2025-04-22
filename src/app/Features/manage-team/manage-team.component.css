@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.manageTeam-container1 {
+  @apply flex justify-center items-center w-full h-full p-3;
+}
+.manageTeam-container2 {
+  @apply flex flex-col gap-10 w-full h-full;
+}
+/* manageTeam-section1 */
+.manageTeam-section1 {
+  @apply flex flex-col gap-3 w-full h-fit;
+}
+.manageTeam-section1 .title {
+  @apply text-4xl font-bold;
+}
+.manageTeam-section1 .info {
+  @apply text-xs text-[#4cceac];
+}
+/* manageTeam-section2 */
+.manageTeam-section2 {
+  @apply flex flex-col text-xs flex-1;
+}
+.manageTeam-section2 .tableHeader {
+  @apply flex justify-between items-center px-5 py-3 rounded-t-sm w-full bg-[#6870fa] text-white;
+}
+.manageTeam-section2 .tableHeader span {
+  @apply flex justify-center items-center h-fit;
+}
+.manageTeam-section2 .tableRow {
+  @apply flex flex-col h-[70%] overflow-auto bg-[#23293c];
+}
+.manageTeam-section2 .tableRow .row {
+  @apply flex justify-between items-center px-5 py-5 w-full border-b hover:bg-[#2d3545] border-gray-400 bg-inherit text-white;
+}
+.manageTeam-section2 .tableRow span {
+  @apply flex justify-center items-center h-fit;
+}
+.manageTeam-section2 .tableFooter {
+  @apply flex justify-end items-center gap-5 text-base px-5 py-3 rounded-b-sm w-full bg-[#6870fa] text-white;
+}
+.manageTeam-section2 .tableFooter .title {
+  /* @apply flex; */
+}
+.manageTeam-section2 .tableFooter .pages {
+  /* @apply flex; */
+}
+.manageTeam-section2 .tableFooter .selectList {
+  @apply outline-none hover:cursor-pointer bg-[#6870fa];
+}
+.manageTeam-section2 .tableFooter .pagesMap {
+  /* @apply flex; */
+}
+.manageTeam-section2 .tableFooter .arrows {
+  @apply flex justify-between items-center;
+}
+.manageTeam-section2 .tableFooter .arrows button {
+  @apply flex justify-between items-center text-2xl;
+}

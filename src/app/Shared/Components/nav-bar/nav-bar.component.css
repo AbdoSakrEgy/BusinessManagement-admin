@@ -30,7 +30,7 @@
 }
 /* navbar-section3 */
 .navbar-section3 {
-  @apply flex flex-col justify-start gap-5 text-sm;
+  @apply flex flex-col justify-start gap-5 text-base;
 }
 .navbar-section3 .link {
   @apply flex justify-start items-center gap-5 hover:cursor-pointer pl-3;
@@ -39,5 +39,5 @@
   @apply text-[#6870fa];
 }
 .navbar-section3 .title {
-  @apply text-xs mt-2 text-gray-400;
+  @apply text-xs mt-5 text-gray-400;
 }

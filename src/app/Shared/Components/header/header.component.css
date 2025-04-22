@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .header-container1 {
-  @apply flex justify-center items-center w-full h-[5%] p-3;
+  @apply flex justify-center items-center p-3 w-full h-full;
 }
 .header-container2 {
   @apply flex justify-between items-center w-full h-full;

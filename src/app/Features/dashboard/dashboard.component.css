@@ -12,11 +12,11 @@
 .dashboard-section1 {
   @apply flex justify-between items-end w-full h-fit;
 }
-.dashboard-section1 .title {
-  @apply text-4xl font-bold;
-}
 .dashboard-section1 .msg {
   @apply flex flex-col gap-3;
+}
+.dashboard-section1 .title {
+  @apply text-4xl font-bold;
 }
 .dashboard-section1 .welcome {
   @apply text-xs text-[#4cceac];

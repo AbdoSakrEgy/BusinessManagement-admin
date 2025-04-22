@@ -1,1 +1,57 @@
-<p>manage-team works!</p>
+<main class="manageTeam-container1">
+  <main class="manageTeam-container2">
+    <div class="manageTeam-section1">
+      <div class="title">TEAM</div>
+      <div class="info">Managing the team mempers</div>
+    </div>
+    <div class="manageTeam-section2">
+      <div class="tableHeader">
+        <span class="w-[10%]">Checkbox</span>
+        <span class="w-[25%]">Name</span>
+        <span class="w-[5%]">Age</span>
+        <span class="w-[10%]">Phone umber</span>
+        <span class="w-[25%]">Email</span>
+        <span class="w-[25%]">Access level</span>
+      </div>
+      <div class="tableRow">
+        @for (employee of dataForView; track $index) {
+        <div class="row">
+          <span class="w-[10%]">Checkbox</span>
+          <span class="w-[25%]">{{ employee.name }}</span>
+          <span class="w-[5%]">{{ employee.age }}</span>
+          <span class="w-[10%]">{{ employee.phoneNumber }}</span>
+          <span class="w-[25%]">{{ employee.email }}</span>
+          <span class="w-[25%]">{{ employee.role }}</span>
+        </div>
+        }
+      </div>
+      <div class="tableFooter">
+        <div class="title">Rows per page:</div>
+        <div class="pages">
+          <select
+            [value]="dataPerPage"
+            (change)="changePageSize($event)"
+            class="selectList"
+          >
+            <option value="1">1</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+          </select>
+        </div>
+        <div class="pagesMap">
+          {{ activePageNumber }}-{{ pageNumbers.length }} of
+          {{ pageNumbers.length }}
+        </div>
+        <div class="arrows">
+          <button (click)="previousPage()">
+            <ng-icon name="matKeyboardArrowLeft" />
+          </button>
+          <button (click)="nextPage()">
+            <ng-icon name="matKeyboardArrowRight" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+</main>
