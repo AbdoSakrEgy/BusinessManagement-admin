@@ -5,7 +5,13 @@ import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
   matKeyboardArrowRight,
   matKeyboardArrowLeft,
+  matCheckBoxOutlineBlank,
+  matCheckBox,
+  matIndeterminateCheckBox,
+  matSecurity,
+  matLockOpen,
 } from '@ng-icons/material-icons/baseline';
+import { matAdminPanelSettingsOutline } from '@ng-icons/material-icons/outline';
 
 @Component({
   selector: 'app-manage-team',
@@ -14,12 +20,21 @@ import {
   templateUrl: './manage-team.component.html',
   styleUrl: './manage-team.component.css',
   viewProviders: [
-    provideIcons({ matKeyboardArrowRight, matKeyboardArrowLeft }),
+    provideIcons({
+      matKeyboardArrowRight,
+      matKeyboardArrowLeft,
+      matCheckBoxOutlineBlank,
+      matCheckBox,
+      matIndeterminateCheckBox,
+      matSecurity,
+      matAdminPanelSettingsOutline,
+      matLockOpen,
+    }),
   ],
 })
 export class ManageTeamComponent {
   data: any[] = [];
-  dataForView?: any[] = [];
+  dataForView: any[] = [];
   dataPerPage = 5;
   selectedPage = 1;
   pageNumbers = [1];
@@ -29,6 +44,42 @@ export class ManageTeamComponent {
     this.data = result;
     this.setPage(this.selectedPage);
   });
+
+  // checkbox logic
+  isOneBoxSelected = false;
+  isAllBoxesSelected = false;
+  selectedBoxes: any[] = [];
+  selectBox(id: any, selectAll?: boolean, unselectAll?: boolean) {
+    if (selectAll) {
+      this.selectedBoxes = this.data
+        .filter((item) => item.id)
+        .map((item) => item.id);
+      console.log(this.selectedBoxes);
+    } else if (unselectAll) {
+      this.selectedBoxes = [];
+    } else {
+      if (this.selectedBoxes.includes(id)) {
+        let newSelectedBoxes = this.selectedBoxes.filter((item) => item != id);
+        this.selectedBoxes = newSelectedBoxes;
+      } else {
+        this.selectedBoxes.push(id);
+      }
+    }
+    if (
+      this.selectedBoxes.length > 0 &&
+      this.selectedBoxes.length != this.data.length
+    ) {
+      this.isOneBoxSelected = true;
+      this.isAllBoxesSelected = false;
+    } else if (this.selectedBoxes.length != 0) {
+      this.isOneBoxSelected = false;
+      this.isAllBoxesSelected = true;
+    } else {
+      this.isOneBoxSelected = false;
+      this.isAllBoxesSelected = false;
+    }
+  }
+  // checkbox logic
 
   constructor(private store: Store) {
     this.store.select(selectEmployees).subscribe((result) => {

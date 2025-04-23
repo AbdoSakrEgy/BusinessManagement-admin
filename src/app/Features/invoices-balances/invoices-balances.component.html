@@ -1,1 +1,117 @@
-<p>invoices-balances works!</p>
+<main class="manageTeam-container1">
+  <main class="manageTeam-container2">
+    <div class="manageTeam-section1">
+      <div class="title">TEAM</div>
+      <div class="info">Managing the team mempers</div>
+    </div>
+    <div class="manageTeam-section2">
+      <div class="tableHeader">
+        <div class="w-[5%]">
+          @if(isOneBoxSelected){
+          <ng-icon
+            name="matIndeterminateCheckBox"
+            class="customCheckbox"
+            (click)="selectBox('', false, true)"
+          />
+          }@else if(isAllBoxesSelected){
+          <ng-icon
+            name="matCheckBox"
+            class="customCheckbox"
+            (click)="selectBox('', false, true)"
+          />
+          }@else {
+          <ng-icon
+            name="matCheckBoxOutlineBlank"
+            class="customCheckbox"
+            (click)="selectBox('', true, false)"
+          />
+          }
+        </div>
+        <div class="w-[5%]">ID</div>
+        <div class="w-[10%]">Name</div>
+        <div class="w-[5%]">Age</div>
+        <div class="w-[10%]">Phone number</div>
+        <div class="w-[20%]">Email</div>
+        <div class="w-[5%]">City</div>
+        <div class="w-[5%]">Cost</div>
+        <div class="w-[10%]">Date</div>
+        <div class="w-[15%]">Role</div>
+      </div>
+      <div class="tableRow">
+        @for (employee of dataForView; track $index) {
+        <div class="row">
+          <div class="w-[5%]">
+            @if(selectedBoxes.includes(employee.id)){
+            <ng-icon
+              name="matCheckBox"
+              class="customCheckbox"
+              (click)="selectBox(employee.id)"
+            />
+            }@else{
+            <ng-icon
+              name="matCheckBoxOutlineBlank"
+              class="customCheckbox"
+              (click)="selectBox(employee.id)"
+            />
+            }
+          </div>
+          <div class="w-[5%]">{{ employee.id }}</div>
+          <div class="w-[10%]">{{ employee.name }}</div>
+          <div class="w-[5%]">{{ employee.age }}</div>
+          <div class="w-[10%]">{{ employee.phoneNumber }}</div>
+          <div class="w-[20%]">{{ employee.email }}</div>
+          <div class="w-[5%]">{{ employee.city }}</div>
+          <div class="w-[5%]">{{ employee.cost }}</div>
+          <div class="w-[10%]">{{ employee.date }}</div>
+          <div class="w-[15%]">
+            <div class="roleStyle">
+              @if(employee.role==='manager'){
+              <ng-icon name="matSecurity" />
+              {{ employee.role }}
+              }@else if (employee.role==='admin'){
+              <ng-icon name="matAdminPanelSettingsOutline" />
+              {{ employee.role }}
+              }@else if(employee.role==='user'){
+              <ng-icon name="matLockOpen" />
+              {{ employee.role }}
+              }
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="tableFooter">
+        @if(selectedBoxes.length!=0){
+        <div class="rowSelected">{{ selectedBoxes.length }} rows selected</div>
+        }
+        <div class="footerControls">
+          <div class="title">Rows per page:</div>
+          <div class="pages">
+            <select
+              [value]="dataPerPage"
+              (change)="changePageSize($event)"
+              class="selectList"
+            >
+              <option value="1">1</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+            </select>
+          </div>
+          <div class="pagesMap">
+            {{ activePageNumber }}-{{ pageNumbers.length }} of
+            {{ pageNumbers.length }}
+          </div>
+          <div class="arrows">
+            <button (click)="previousPage()">
+              <ng-icon name="matKeyboardArrowLeft" />
+            </button>
+            <button (click)="nextPage()">
+              <ng-icon name="matKeyboardArrowRight" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</main>

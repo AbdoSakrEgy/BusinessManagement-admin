@@ -22,12 +22,17 @@
 .manageTeam-section2 {
   @apply flex flex-col text-xs flex-1;
 }
+.manageTeam-section2 .customCheckbox {
+  @apply w-6 h-6 hover:cursor-pointer accent-[#ffff80];
+}
+/* manageTeam-section2 tableHeader*/
 .manageTeam-section2 .tableHeader {
   @apply flex justify-between items-center px-5 py-3 rounded-t-sm w-full bg-[#6870fa] text-white;
 }
 .manageTeam-section2 .tableHeader span {
   @apply flex justify-center items-center h-fit;
 }
+/* manageTeam-section2 tableRow*/
 .manageTeam-section2 .tableRow {
   @apply flex flex-col h-[70%] overflow-auto bg-[#23293c];
 }
@@ -37,20 +42,34 @@
 .manageTeam-section2 .tableRow span {
   @apply flex justify-center items-center h-fit;
 }
+.manageTeam-section2 .rowCheckbox {
+  @apply w-5 h-5 hover:cursor-pointer accent-[#ffff80];
+}
+/* role culomn */
+.manageTeam-section2 .tableRow .roleStyle {
+  @apply flex justify-center items-center gap-3 text-lg rounded-md bg-[#4cceabb9];
+}
+.manageTeam-section2 .tableRow .roleStyle ng-icon {
+  @apply text-xl;
+}
+/* manageTeam-section2 tableFooter*/
 .manageTeam-section2 .tableFooter {
+  @apply flex justify-between items-center;
+}
+.manageTeam-section2 .tableFooter .rowSelected {
+  @apply flex justify-start items-center pl-3 text-xs w-full h-full bg-[#6870fa];
+}
+.manageTeam-section2 .tableFooter .footerControls {
   @apply flex justify-end items-center gap-5 text-base px-5 py-3 rounded-b-sm w-full bg-[#6870fa] text-white;
 }
 .manageTeam-section2 .tableFooter .title {
-  /* @apply flex; */
 }
 .manageTeam-section2 .tableFooter .pages {
-  /* @apply flex; */
 }
 .manageTeam-section2 .tableFooter .selectList {
   @apply outline-none hover:cursor-pointer bg-[#6870fa];
 }
 .manageTeam-section2 .tableFooter .pagesMap {
-  /* @apply flex; */
 }
 .manageTeam-section2 .tableFooter .arrows {
   @apply flex justify-between items-center;

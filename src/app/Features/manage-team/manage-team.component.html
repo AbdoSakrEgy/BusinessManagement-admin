@@ -6,50 +6,102 @@
     </div>
     <div class="manageTeam-section2">
       <div class="tableHeader">
-        <span class="w-[10%]">Checkbox</span>
-        <span class="w-[25%]">Name</span>
-        <span class="w-[5%]">Age</span>
-        <span class="w-[10%]">Phone umber</span>
-        <span class="w-[25%]">Email</span>
-        <span class="w-[25%]">Access level</span>
+        <div class="w-[5%]">
+          @if(isOneBoxSelected){
+          <ng-icon
+            name="matIndeterminateCheckBox"
+            class="customCheckbox"
+            (click)="selectBox('', false, true)"
+          />
+          }@else if(isAllBoxesSelected){
+          <ng-icon
+            name="matCheckBox"
+            class="customCheckbox"
+            (click)="selectBox('', false, true)"
+          />
+          }@else {
+          <ng-icon
+            name="matCheckBoxOutlineBlank"
+            class="customCheckbox"
+            (click)="selectBox('', true, false)"
+          />
+          }
+        </div>
+        <div class="w-[10%]">Name</div>
+        <div class="w-[5%]">Age</div>
+        <div class="w-[10%]">Phone number</div>
+        <div class="w-[25%]">Email</div>
+        <div class="w-[15%]">Role</div>
       </div>
       <div class="tableRow">
         @for (employee of dataForView; track $index) {
         <div class="row">
-          <span class="w-[10%]">Checkbox</span>
-          <span class="w-[25%]">{{ employee.name }}</span>
-          <span class="w-[5%]">{{ employee.age }}</span>
-          <span class="w-[10%]">{{ employee.phoneNumber }}</span>
-          <span class="w-[25%]">{{ employee.email }}</span>
-          <span class="w-[25%]">{{ employee.role }}</span>
+          <div class="w-[5%]">
+            @if(selectedBoxes.includes(employee.id)){
+            <ng-icon
+              name="matCheckBox"
+              class="customCheckbox"
+              (click)="selectBox(employee.id)"
+            />
+            }@else{
+            <ng-icon
+              name="matCheckBoxOutlineBlank"
+              class="customCheckbox"
+              (click)="selectBox(employee.id)"
+            />
+            }
+          </div>
+          <div class="w-[10%]">{{ employee.name }}</div>
+          <div class="w-[5%]">{{ employee.age }}</div>
+          <div class="w-[10%]">{{ employee.phoneNumber }}</div>
+          <div class="w-[25%]">{{ employee.email }}</div>
+          <div class="w-[15%]">
+            <div class="roleStyle">
+              @if(employee.role==='manager'){
+              <ng-icon name="matSecurity" />
+              {{ employee.role }}
+              }@else if (employee.role==='admin'){
+              <ng-icon name="matAdminPanelSettingsOutline" />
+              {{ employee.role }}
+              }@else if(employee.role==='user'){
+              <ng-icon name="matLockOpen" />
+              {{ employee.role }}
+              }
+            </div>
+          </div>
         </div>
         }
       </div>
       <div class="tableFooter">
-        <div class="title">Rows per page:</div>
-        <div class="pages">
-          <select
-            [value]="dataPerPage"
-            (change)="changePageSize($event)"
-            class="selectList"
-          >
-            <option value="1">1</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-          </select>
-        </div>
-        <div class="pagesMap">
-          {{ activePageNumber }}-{{ pageNumbers.length }} of
-          {{ pageNumbers.length }}
-        </div>
-        <div class="arrows">
-          <button (click)="previousPage()">
-            <ng-icon name="matKeyboardArrowLeft" />
-          </button>
-          <button (click)="nextPage()">
-            <ng-icon name="matKeyboardArrowRight" />
-          </button>
+        @if(selectedBoxes.length!=0){
+        <div class="rowSelected">{{ selectedBoxes.length }} rows selected</div>
+        }
+        <div class="footerControls">
+          <div class="title">Rows per page:</div>
+          <div class="pages">
+            <select
+              [value]="dataPerPage"
+              (change)="changePageSize($event)"
+              class="selectList"
+            >
+              <option value="1">1</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+            </select>
+          </div>
+          <div class="pagesMap">
+            {{ activePageNumber }}-{{ pageNumbers.length }} of
+            {{ pageNumbers.length }}
+          </div>
+          <div class="arrows">
+            <button (click)="previousPage()">
+              <ng-icon name="matKeyboardArrowLeft" />
+            </button>
+            <button (click)="nextPage()">
+              <ng-icon name="matKeyboardArrowRight" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
