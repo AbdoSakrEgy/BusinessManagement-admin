@@ -5,8 +5,104 @@
       <div class="info">Managing the team mempers</div>
     </div>
     <div class="manageTeam-section2">
+      <div class="tableControls">
+        <div class="columns" [matMenuTriggerFor]="columnsMenu">
+          <ng-icon name="matViewColumn" />COLUMNS
+        </div>
+        <mat-menu #columnsMenu="matMenu" panelClass="my-custom-menu">
+          <div class="columnsList">
+            <div class="columnsItem">
+              <mat-slide-toggle
+                (click)="$event.stopPropagation()"
+                [(ngModel)]="isIDVisable"
+                color="primary"
+              >
+                ID
+              </mat-slide-toggle>
+            </div>
+            <div class="columnsItem">
+              <mat-slide-toggle
+                (click)="$event.stopPropagation()"
+                [(ngModel)]="isAgeVisable"
+                color="primary"
+              >
+                Age
+              </mat-slide-toggle>
+            </div>
+            <div class="columnsItem">
+              <mat-slide-toggle
+                (click)="$event.stopPropagation()"
+                [(ngModel)]="isPhoneNumberVisable"
+                color="primary"
+              >
+                PhoneNumber
+              </mat-slide-toggle>
+            </div>
+            <div class="columnsItem">
+              <mat-slide-toggle
+                (click)="$event.stopPropagation()"
+                [(ngModel)]="isEmailVisable"
+                color="primary"
+              >
+                Email
+              </mat-slide-toggle>
+            </div>
+            <div class="columnsItem">
+              <mat-slide-toggle
+                (click)="$event.stopPropagation()"
+                [(ngModel)]="isCityVisable"
+                color="primary"
+              >
+                City
+              </mat-slide-toggle>
+            </div>
+          </div>
+        </mat-menu>
+        <div class="filters" [matMenuTriggerFor]="filtersMenu">
+          <ng-icon name="matFilterList" /> FILTERS
+        </div>
+        <mat-menu #filtersMenu="matMenu">
+          <div class="filterList">
+            <div class="filterItem1">
+              <mat-form-field>
+                <mat-label>Favorite food</mat-label>
+                <mat-select>
+                  <mat-option value="ID">ID</mat-option>
+                  <mat-option value="Age">Age</mat-option>
+                  <mat-option value="PhoneNumber">PhoneNumber</mat-option>
+                  <mat-option value="Email">Email</mat-option>
+                  <mat-option value="City">City</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="filterItem2">
+              <span>Value</span>
+            </div>
+            <div class="filterItem3">
+              <button>Search</button>
+            </div>
+          </div>
+        </mat-menu>
+        <div class="density" [matMenuTriggerFor]="densityMenu">
+          <ng-icon name="matDensityMedium" /> DENSITY
+        </div>
+        <mat-menu #densityMenu="matMenu">
+          <div class="densityList">
+            <div class="densityItem" (click)="setRowPadding(10)">
+              <ng-icon name="matDensitySmall" />Compact
+            </div>
+            <div class="densityItem" (click)="setRowPadding(20)">
+              <ng-icon name="matDensityMedium" />Standard
+            </div>
+            <div class="densityItem" (click)="setRowPadding(40)">
+              <ng-icon name="matDensityLarge" />Comfortable
+            </div>
+          </div>
+        </mat-menu>
+        <div class="export"><ng-icon name="matDownload" /> EXPORT</div>
+      </div>
       <div class="tableHeader">
-        <div class="w-[5%] check">
+        <div class="w-[5%] check" [hidden]="true">
           @if(isOneBoxSelected){
           <ng-icon
             name="matIndeterminateCheckBox"
@@ -27,18 +123,19 @@
           />
           }
         </div>
-        <div class="w-[5%] id">ID</div>
+        <div class="w-[5%] id" [hidden]="!isIDVisable">ID</div>
         <div class="w-[20%] name">Name</div>
-        <div class="w-[5%] age">Age</div>
-        <div class="w-[10%] phoneNumber">Phone number</div>
-        <div class="w-[25%] email">Email</div>
-        <div class="w-[5%] city">City</div>
-        <div class="w-[20%] role">Role</div>
+        <div class="w-[5%] age" [hidden]="!isAgeVisable">Age</div>
+        <div class="w-[10%] phoneNumber" [hidden]="!isPhoneNumberVisable">
+          Phone number
+        </div>
+        <div class="w-[25%] email" [hidden]="!isEmailVisable">Email</div>
+        <div class="w-[5%] city" [hidden]="!isCityVisable">City</div>
       </div>
       <div class="tableRow">
         @for (employee of dataForView; track $index) {
-        <div class="row">
-          <div class="w-[5%] check">
+        <div class="row" [style.padding.px]="rowPadding">
+          <div class="w-[5%] check" [hidden]="true">
             @if(selectedBoxes.includes(employee.id)){
             <ng-icon
               name="matCheckBox"
@@ -53,25 +150,19 @@
             />
             }
           </div>
-          <div class="w-[5%] id">{{ employee.id }}</div>
+          <div class="w-[5%] id" [hidden]="!isIDVisable">{{ employee.id }}</div>
           <div class="w-[20%] name">{{ employee.name }}</div>
-          <div class="w-[5%] age">{{ employee.age }}</div>
-          <div class="w-[10%] phoneNumber">{{ employee.phoneNumber }}</div>
-          <div class="w-[25%] email">{{ employee.email }}</div>
-          <div class="w-[5%] city">{{ employee.city }}</div>
-          <div class="w-[20%] role">
-            <div class="roleStyle">
-              @if(employee.role==='manager'){
-              <ng-icon name="matSecurity" />
-              {{ employee.role }}
-              }@else if (employee.role==='admin'){
-              <ng-icon name="matAdminPanelSettingsOutline" />
-              {{ employee.role }}
-              }@else if(employee.role==='user'){
-              <ng-icon name="matLockOpen" />
-              {{ employee.role }}
-              }
-            </div>
+          <div class="w-[5%] age" [hidden]="!isAgeVisable">
+            {{ employee.age }}
+          </div>
+          <div class="w-[10%] phoneNumber" [hidden]="!isPhoneNumberVisable">
+            {{ employee.phoneNumber }}
+          </div>
+          <div class="w-[25%] email" [hidden]="!isEmailVisable">
+            {{ employee.email }}
+          </div>
+          <div class="w-[5%] city" [hidden]="!isCityVisable">
+            {{ employee.city }}
           </div>
         </div>
         }

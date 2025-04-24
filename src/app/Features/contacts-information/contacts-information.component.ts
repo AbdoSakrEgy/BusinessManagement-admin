@@ -10,13 +10,29 @@ import {
   matIndeterminateCheckBox,
   matSecurity,
   matLockOpen,
+  matViewColumn,
+  matFilterList,
+  matDownload,
+  matDensitySmall,
+  matDensityMedium,
+  matDensityLarge,
 } from '@ng-icons/material-icons/baseline';
 import { matAdminPanelSettingsOutline } from '@ng-icons/material-icons/outline';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-contacts-information',
   standalone: true,
-  imports: [NgIcon],
+  imports: [
+    NgIcon,
+    MatMenuModule,
+    MatSlideToggleModule,
+    FormsModule,
+    MatSelectModule,
+  ],
   templateUrl: './contacts-information.component.html',
   styleUrl: './contacts-information.component.css',
   viewProviders: [
@@ -29,23 +45,37 @@ import { matAdminPanelSettingsOutline } from '@ng-icons/material-icons/outline';
       matSecurity,
       matAdminPanelSettingsOutline,
       matLockOpen,
+      matViewColumn,
+      matFilterList,
+      matDownload,
+      matDensitySmall,
+      matDensityMedium,
+      matDensityLarge,
     }),
   ],
 })
 export class ContactsInformationComponent {
-  data: any[] = [];
-  dataForView: any[] = [];
-  dataPerPage = 5;
-  selectedPage = 1;
-  pageNumbers = [1];
-  activePageNumber = 1;
+  constructor(private store: Store) {
+    this.store.select(selectEmployees).subscribe((result) => {
+      this.data = result;
+      this.setPage(this.selectedPage);
+    });
+  }
 
-  isDataUpdated$ = this.store.select(selectEmployees).subscribe((result) => {
-    this.data = result;
-    this.setPage(this.selectedPage);
-  });
+  // Density logic
+  rowPadding = 20;
+  setRowPadding(padding: number) {
+    this.rowPadding = padding;
+  }
 
-  // checkbox logic
+  // ShowColumns logic
+  isIDVisable = true;
+  isAgeVisable = true;
+  isPhoneNumberVisable = true;
+  isEmailVisable = true;
+  isCityVisable = true;
+
+  // CheckBox logic
   isOneBoxSelected = false;
   isAllBoxesSelected = false;
   selectedBoxes: any[] = [];
@@ -79,15 +109,19 @@ export class ContactsInformationComponent {
       this.isAllBoxesSelected = false;
     }
   }
-  // checkbox logic
 
-  constructor(private store: Store) {
-    this.store.select(selectEmployees).subscribe((result) => {
-      this.data = result;
-      this.setPage(this.selectedPage);
-    });
-  }
+  // TableFooter logic
+  data: any[] = [];
+  dataForView: any[] = [];
+  dataPerPage = 5;
+  selectedPage = 1;
+  pageNumbers = [1];
+  activePageNumber = 1;
 
+  isDataUpdated$ = this.store.select(selectEmployees).subscribe((result) => {
+    this.data = result;
+    this.setPage(this.selectedPage);
+  });
   setPage(page: number) {
     const startIndex = (page - 1) * this.dataPerPage;
     const endIndex = startIndex + this.dataPerPage;

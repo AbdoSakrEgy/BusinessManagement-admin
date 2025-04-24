@@ -25,6 +25,35 @@
 .manageTeam-section2 .customCheckbox {
   @apply w-6 h-6 hover:cursor-pointer accent-[#ffff80];
 }
+/* manageTeam-section2  tableControls*/
+.manageTeam-section2 .tableControls {
+  @apply flex justify-start items-center gap-3;
+}
+.manageTeam-section2 .tableControls ng-icon {
+  @apply text-base;
+}
+.manageTeam-section2 .tableControls .columns,
+.filters,
+.density,
+.export {
+  @apply flex justify-center items-center gap-1 cursor-pointer py-2;
+}
+.columnsList,
+.densityList {
+  @apply flex flex-col gap-3;
+}
+.filterList {
+  @apply flex justify-between gap-3;
+}
+.densityItem,
+.columnsItem {
+  @apply flex justify-start items-center gap-1 p-3 cursor-pointer hover:bg-[#f0f0f0];
+}
+.filterItem1,
+.filterItem2,
+.filterItem3 {
+  @apply flex flex-col gap-1;
+}
 /* manageTeam-section2 tableHeader*/
 .manageTeam-section2 .tableHeader {
   @apply flex justify-between items-center px-5 py-3 rounded-t-sm w-full bg-[#6870fa] text-white;
@@ -37,7 +66,7 @@
   @apply flex flex-col h-[70%] overflow-auto bg-[#23293c];
 }
 .manageTeam-section2 .tableRow .row {
-  @apply flex justify-between items-center px-5 py-5 w-full border-b hover:bg-[#2d3545] border-gray-400 bg-inherit text-white;
+  @apply flex justify-between items-center px-5 w-full border-b hover:bg-[#2d3545] border-gray-400 bg-inherit text-white;
 }
 .manageTeam-section2 .tableRow span {
   @apply flex justify-center items-center h-fit;
