@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.faq-container1 {
+  @apply flex justify-center items-center w-full h-full p-3;
+}
+.faq-container2 {
+  @apply flex flex-col gap-10 w-full h-full;
+}
+/* faq-section1 */
+.faq-section1 {
+  @apply flex flex-col gap-3 w-full h-fit;
+}
+.faq-section1 .title {
+  @apply text-4xl font-bold;
+}
+.faq-section1 .info {
+  @apply text-xs text-[#4cceac];
+}
+/* faq-section2 */
+.faq-section2 {
+  @apply flex flex-col gap-3 w-full h-fit;
+}
+::ng-deep .custom-arrow-white::after {
+  color: white;
+  filter: invert(1); /* fallback for some themes */
+}
+.accordingItem {
+  @apply bg-[#2d3545] text-white;
+}
+.accordingButton {
+  @apply bg-[#2d3545] text-[#4cceac] text-lg outline-none focus:outline-none w-full text-left px-4 py-2 custom-arrow-white border-none shadow-none;
+}
+.accordingBody {
+  @apply bg-[#2d3545] text-white px-4 py-2 text-sm;
+}

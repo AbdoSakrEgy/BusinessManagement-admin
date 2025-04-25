@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-faq',
   standalone: true,
-  imports: [],
+  imports: [NgbAccordionModule],
   templateUrl: './faq.component.html',
-  styleUrl: './faq.component.css'
+  styleUrl: './faq.component.css',
 })
-export class FAQComponent {
-
-}
+export class FAQComponent {}
