@@ -22,6 +22,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-contacts-information',
@@ -32,6 +33,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatSlideToggleModule,
     FormsModule,
     MatSelectModule,
+    NgbDropdownModule,
   ],
   templateUrl: './contacts-information.component.html',
   styleUrl: './contacts-information.component.css',
@@ -66,6 +68,19 @@ export class ContactsInformationComponent {
   rowPadding = 20;
   setRowPadding(padding: number) {
     this.rowPadding = padding;
+  }
+
+  // Filters logic
+  searchKey = '';
+  selectedColumn = '';
+  filterRows(selectedColumn: string) {
+    let filteredRows = this.data.filter(
+      (item) => item[selectedColumn] == this.searchKey
+    );
+    this.dataForView = filteredRows;
+  }
+  resetFilter() {
+    this.setPage(1);
   }
 
   // ShowColumns logic

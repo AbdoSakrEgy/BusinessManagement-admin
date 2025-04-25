@@ -10,28 +10,19 @@
           <ng-icon name="matViewColumn" />COLUMNS
         </div>
         <mat-menu #columnsMenu="matMenu" panelClass="my-custom-menu">
-          <div class="columnsList">
+          <div class="columnsList" (click)="$event.stopPropagation()">
             <div class="columnsItem">
-              <mat-slide-toggle
-                (click)="$event.stopPropagation()"
-                [(ngModel)]="isIDVisable"
-                color="primary"
-              >
+              <mat-slide-toggle [(ngModel)]="isIDVisable" color="primary">
                 ID
               </mat-slide-toggle>
             </div>
             <div class="columnsItem">
-              <mat-slide-toggle
-                (click)="$event.stopPropagation()"
-                [(ngModel)]="isAgeVisable"
-                color="primary"
-              >
+              <mat-slide-toggle [(ngModel)]="isAgeVisable" color="primary">
                 Age
               </mat-slide-toggle>
             </div>
             <div class="columnsItem">
               <mat-slide-toggle
-                (click)="$event.stopPropagation()"
                 [(ngModel)]="isPhoneNumberVisable"
                 color="primary"
               >
@@ -39,33 +30,62 @@
               </mat-slide-toggle>
             </div>
             <div class="columnsItem">
-              <mat-slide-toggle
-                (click)="$event.stopPropagation()"
-                [(ngModel)]="isEmailVisable"
-                color="primary"
-              >
+              <mat-slide-toggle [(ngModel)]="isEmailVisable" color="primary">
                 Email
               </mat-slide-toggle>
             </div>
             <div class="columnsItem">
-              <mat-slide-toggle
-                (click)="$event.stopPropagation()"
-                [(ngModel)]="isCityVisable"
-                color="primary"
-              >
+              <mat-slide-toggle [(ngModel)]="isCityVisable" color="primary">
                 City
               </mat-slide-toggle>
             </div>
           </div>
         </mat-menu>
-        <div class="filters" [matMenuTriggerFor]="filtersMenu">
+        <div ngbDropdown class="">
+          <button
+            type="button"
+            class="filters"
+            id="filtersMenu"
+            ngbDropdownToggle
+          >
+            <ng-icon name="matFilterList" /> FILTERS
+          </button>
+          <div ngbDropdownMenu aria-labelledby="filtersMenu">
+            <div class="filterList">
+              <select class="filterItem" [(ngModel)]="selectedColumn">
+                <option value="id">ID</option>
+                <option value="age">Age</option>
+                <option value="phoneNumber">PhoneNumber</option>
+                <option value="email">Email</option>
+                <option value="city">City</option>
+              </select>
+              <input
+                type="text"
+                placeholder="Value"
+                class="filterItem"
+                [(ngModel)]="searchKey"
+              />
+              <button
+                type="button"
+                class="filterItem"
+                (click)="filterRows(selectedColumn)"
+              >
+                Search
+              </button>
+              <button type="button" class="filterItem" (click)="resetFilter()">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="filters" [matMenuTriggerFor]="filtersMenu">
           <ng-icon name="matFilterList" /> FILTERS
         </div>
-        <mat-menu #filtersMenu="matMenu">
-          <div class="filterList">
+        <mat-menu #filtersMenu="matMenu" >
+          <div class="filterList" (click)="$event.stopPropagation()">
             <div class="filterItem1">
               <mat-form-field>
-                <mat-label>Favorite food</mat-label>
+                <mat-label>Column</mat-label>
                 <mat-select>
                   <mat-option value="ID">ID</mat-option>
                   <mat-option value="Age">Age</mat-option>
@@ -82,7 +102,7 @@
               <button>Search</button>
             </div>
           </div>
-        </mat-menu>
+        </mat-menu> -->
         <div class="density" [matMenuTriggerFor]="densityMenu">
           <ng-icon name="matDensityMedium" /> DENSITY
         </div>

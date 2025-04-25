@@ -42,18 +42,17 @@
 .densityList {
   @apply flex flex-col gap-3;
 }
-.filterList {
-  @apply flex justify-between gap-3;
-}
 .densityItem,
 .columnsItem {
   @apply flex justify-start items-center gap-1 p-3 cursor-pointer hover:bg-[#f0f0f0];
 }
-.filterItem1,
-.filterItem2,
-.filterItem3 {
-  @apply flex flex-col gap-1;
+.filterList {
+  @apply flex justify-between gap-3 p-3;
 }
+.filterItem {
+  @apply outline-none h-full text-xs p-2 rounded-md border border-gray-400;
+}
+
 /* manageTeam-section2 tableHeader*/
 .manageTeam-section2 .tableHeader {
   @apply flex justify-between items-center px-5 py-3 rounded-t-sm w-full bg-[#6870fa] text-white;

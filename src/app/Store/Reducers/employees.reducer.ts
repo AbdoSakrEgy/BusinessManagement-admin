@@ -39,6 +39,18 @@ export const initialState = [
     role: 'admin',
   },
   {
+    id: '4',
+    name: 'Mohammed',
+    age: 30,
+    phoneNumber: '01007137667',
+    email: 'mohammed@gmail.com',
+    city: 'Tanta',
+    cost: '$5.7',
+    date: '04/01/2022',
+    zipcode: '98245',
+    role: 'admin',
+  },
+  {
     id: '5',
     name: 'Mohammed',
     age: 30,
