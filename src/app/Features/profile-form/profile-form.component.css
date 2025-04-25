@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.profileForm-container1 {
+  @apply flex justify-center items-center w-full h-full p-3;
+}
+.profileForm-container2 {
+  @apply flex flex-col gap-10 w-full h-full;
+}
+/* profileForm-section1 */
+.profileForm-section1 {
+  @apply flex flex-col gap-3 w-full h-fit;
+}
+.profileForm-section1 .title {
+  @apply text-4xl font-bold;
+}
+.profileForm-section1 .info {
+  @apply text-xs text-[#4cceac];
+}
+/* profileForm-section2 */
+.profileForm-section2 {
+  @apply flex flex-col text-xs flex-1;
+}
+.profileForm-section2 .userForm {
+  @apply w-full;
+}
+.profileForm-section2 .nameForm {
+  @apply flex justify-between items-center gap-5 w-full;
+}
+.profileForm-section2 .input {
+  @apply w-full;
+}
+.profileForm-section2 .btnForm {
+  @apply flex justify-end w-full;
+}
+.profileForm-section2 .submitBTN {
+  @apply flex justify-between items-center rounded-md p-3 text-xs bg-[#4cceac] text-black;
+}

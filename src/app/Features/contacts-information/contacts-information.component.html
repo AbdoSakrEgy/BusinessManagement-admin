@@ -53,6 +53,9 @@
           <div ngbDropdownMenu aria-labelledby="filtersMenu">
             <div class="filterList">
               <select class="filterItem" [(ngModel)]="selectedColumn">
+                <option value="" disabled selected hidden>
+                  Select a column
+                </option>
                 <option value="id">ID</option>
                 <option value="age">Age</option>
                 <option value="phoneNumber">PhoneNumber</option>

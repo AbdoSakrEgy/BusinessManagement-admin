@@ -1,1 +1,157 @@
-<p>profile-form works!</p>
+<main class="profileForm-container1">
+  <main class="profileForm-container2">
+    <div class="profileForm-section1">
+      <div class="title">CREATE USER</div>
+      <div class="info">Create a New User Profile</div>
+    </div>
+    <div class="profileForm-section2">
+      <form (ngSubmit)="onSubmit()" class="userForm" [formGroup]="profileForm">
+        <div class="nameForm">
+          <!-- firstName -->
+          <mat-form-field class="input">
+            <mat-label>First Name</mat-label>
+            <input
+              matInput
+              formControlName="firstName"
+              [class.valid]="
+                profileForm.get('firstName')?.valid &&
+                (profileForm.get('firstName')?.dirty ||
+                  profileForm.get('firstName')?.touched)
+              "
+              [class.invalid]="
+                profileForm.get('firstName')?.invalid &&
+                (profileForm.get('firstName')?.dirty ||
+                  profileForm.get('firstName')?.touched)
+              "
+            />
+            @if (profileForm.get('firstName')?.errors &&
+            profileForm.get('firstName')?.hasError('required')) {
+            <mat-error>name is <strong>required</strong></mat-error>
+            } @if (profileForm.get('firstName')?.errors &&
+            profileForm.get('firstName')?.hasError('minlength')) {
+            <mat-error>Name is short</mat-error>
+            }@if (profileForm.get('firstName')?.errors &&
+            profileForm.get('firstName')?.hasError('maxlength')) {
+            <mat-error>Name is long</mat-error>
+            }
+          </mat-form-field>
+          <!-- lastName -->
+          <mat-form-field class="input">
+            <mat-label>Last Name</mat-label>
+            <input
+              matInput
+              formControlName="lastName"
+              [class.valid]="
+                profileForm.get('lastName')?.valid &&
+                (profileForm.get('lastName')?.dirty ||
+                  profileForm.get('lastName')?.touched)
+              "
+              [class.invalid]="
+                profileForm.get('lastName')?.invalid &&
+                (profileForm.get('lastName')?.dirty ||
+                  profileForm.get('lastName')?.touched)
+              "
+            />
+            @if (profileForm.get('lastName')?.errors &&
+            profileForm.get('lastName')?.hasError('required')) {
+            <mat-error>name is <strong>required</strong></mat-error>
+            } @if (profileForm.get('lastName')?.errors &&
+            profileForm.get('lastName')?.hasError('minlength')) {
+            <mat-error>Name is short</mat-error>
+            }@if (profileForm.get('lastName')?.errors &&
+            profileForm.get('lastName')?.hasError('maxlength')) {
+            <mat-error>Name is long</mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <!-- email -->
+        <mat-form-field class="input">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            formControlName="email"
+            [class.valid]="
+              profileForm.get('email')?.valid &&
+              (profileForm.get('email')?.dirty ||
+                profileForm.get('email')?.touched)
+            "
+            [class.invalid]="
+              profileForm.get('email')?.invalid &&
+              (profileForm.get('email')?.dirty ||
+                profileForm.get('email')?.touched)
+            "
+          />
+          @if (profileForm.get('email')?.errors &&
+          profileForm.get('email')?.hasError('required')) {
+          <mat-error>email is <strong>required</strong></mat-error>
+          } @if (profileForm.get('email')?.errors &&
+          profileForm.get('email')?.hasError('email')) {
+          <mat-error>Please enter a valid email address</mat-error>
+          }
+        </mat-form-field>
+        <!-- phoneNumber -->
+        <mat-form-field class="input">
+          <mat-label>Phone Number</mat-label>
+          <input
+            matInput
+            formControlName="phoneNumber"
+            [class.valid]="
+              profileForm.get('phoneNumber')?.valid &&
+              (profileForm.get('phoneNumber')?.dirty ||
+                profileForm.get('phoneNumber')?.touched)
+            "
+            [class.invalid]="
+              profileForm.get('phoneNumber')?.invalid &&
+              (profileForm.get('phoneNumber')?.dirty ||
+                profileForm.get('phoneNumber')?.touched)
+            "
+          />
+          @if (profileForm.get('phoneNumber')?.errors &&
+          profileForm.get('phoneNumber')?.hasError('required')) {
+          <mat-error>phone number is <strong>required</strong></mat-error>
+          } @if (profileForm.get('phoneNumber')?.errors &&
+          profileForm.get('phoneNumber')?.hasError('minlength')) {
+          <mat-error>Incorrect number</mat-error>
+          }@if (profileForm.get('phoneNumber')?.errors &&
+          profileForm.get('phoneNumber')?.hasError('maxlength')) {
+          <mat-error>Incorrect number</mat-error>
+          }
+        </mat-form-field>
+        <!-- address -->
+        <mat-form-field class="input">
+          <mat-label>Address</mat-label>
+          <input
+            matInput
+            formControlName="address"
+            [class.valid]="
+              profileForm.get('address')?.valid &&
+              (profileForm.get('address')?.dirty ||
+                profileForm.get('address')?.touched)
+            "
+            [class.invalid]="
+              profileForm.get('address')?.invalid &&
+              (profileForm.get('address')?.dirty ||
+                profileForm.get('address')?.touched)
+            "
+          />
+          @if (profileForm.get('address')?.errors &&
+          profileForm.get('address')?.hasError('required')) {
+          <mat-error>address is <strong>required</strong></mat-error>
+          } @if (profileForm.get('address')?.errors &&
+          profileForm.get('address')?.hasError('maxlength')) {
+          <mat-error>Address is long</mat-error>
+          }
+        </mat-form-field>
+        <div class="btnForm">
+          <button
+            type="button"
+            [disabled]="profileForm.invalid"
+            class="submitBTN"
+          >
+            CREATE NEW USER
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+</main>
