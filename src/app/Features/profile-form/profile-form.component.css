@@ -32,7 +32,7 @@
   @apply p-3 rounded-md outline-none w-full;
 }
 .profileForm-section2 .input {
-  @apply p-3 rounded-md outline-none w-full bg-[#23293c] text-white;
+  @apply p-3 rounded-md outline-none w-full bg-[#2d3545] text-white;
 }
 .profileForm-section2 .errWrapper {
   @apply text-red-600 h-1 p-1;
@@ -41,5 +41,5 @@
   @apply flex justify-end w-full;
 }
 .profileForm-section2 .submitBTN {
-  @apply flex justify-between items-center rounded-md px-3 py-5 text-xs bg-[#4cceac] text-black;
+  @apply flex justify-between items-center rounded-md p-3 text-xs bg-[#4cceac] text-black;
 }
