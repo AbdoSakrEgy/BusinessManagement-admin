@@ -16,7 +16,7 @@
   @apply text-4xl font-bold;
 }
 .faq-section1 .info {
-  @apply text-xs text-[#4cceac];
+  @apply text-xs text-green1;
 }
 /* faq-section2 */
 .faq-section2 {
@@ -27,11 +27,11 @@
   filter: invert(1); /* fallback for some themes */
 }
 .accordingItem {
-  @apply bg-[#2d3545] text-white;
+  @apply bg-lightGray text-black dark:bg-gray3 dark:text-white;
 }
 .accordingButton {
-  @apply bg-[#2d3545] text-[#4cceac] text-lg outline-none focus:outline-none w-full text-left px-4 py-2 custom-arrow-white border-none shadow-none;
+  @apply bg-lightGray dark:bg-gray3 text-green1 text-lg outline-none focus:outline-none w-full text-left px-4 py-2 custom-arrow-white border-none shadow-none;
 }
 .accordingBody {
-  @apply bg-[#2d3545] text-white px-4 py-2 text-sm;
+  @apply bg-lightGray text-black dark:bg-gray3 dark:text-white px-4 py-2 text-sm;
 }

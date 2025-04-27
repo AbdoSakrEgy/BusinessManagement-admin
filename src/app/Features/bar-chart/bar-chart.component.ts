@@ -8,7 +8,7 @@ import { Color, ScaleType } from '@swimlane/ngx-charts';
 @Component({
   selector: 'app-bar-chart',
   standalone: true,
-  imports: [ NgxChartsModule],
+  imports: [NgxChartsModule],
   templateUrl: './bar-chart.component.html',
   styleUrl: './bar-chart.component.css',
 })
@@ -32,7 +32,7 @@ export class BarChartComponent {
     name: 'customScheme',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#4cceac', '#db4f4a', '#C7B42C','#4cceac','#db4f4a'],
+    domain: ['#1E88E5', '#D32F2F', '#FFC107', '#FFFFFF'],
   };
 
   constructor(private store: Store) {

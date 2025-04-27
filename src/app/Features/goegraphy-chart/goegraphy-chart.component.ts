@@ -20,6 +20,7 @@ import { topology } from './topology';
 })
 export class GoegraphyChartComponent {
   public chartOptions: AgChartOptions = {};
+  bgColor = '#f0eeef';
 
   constructor() {
     this.chartOptions = {
@@ -27,7 +28,7 @@ export class GoegraphyChartComponent {
         overrides: {
           common: {
             background: {
-              fill: '#23293c', // Replace with your desired background color
+              fill: '', // Replace with your desired background color
             },
           },
         },

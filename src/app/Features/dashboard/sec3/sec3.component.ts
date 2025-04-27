@@ -42,7 +42,7 @@ export class Sec3Component {
     name: 'customScheme',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#db4f4a', '#6870fa', '#4cceac'],
+    domain: ['#1E88E5', '#D32F2F', '#FFC107', '#FFFFFF'],
   };
 
   constructor() {

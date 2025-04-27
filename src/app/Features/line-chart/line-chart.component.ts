@@ -37,7 +37,7 @@ export class LineChartComponent {
     name: 'customScheme',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#4cceac', '#db4f4a', '#C7B42C', '#9b59b6', '#d3c0f9', '#2ecc71'],
+    domain: ['#1E88E5', '#D32F2F', '#FFC107', '#00C000', '#4cceac'],
   };
 
   constructor(private store: Store) {

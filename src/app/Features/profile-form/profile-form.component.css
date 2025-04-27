@@ -16,7 +16,7 @@
   @apply text-4xl font-bold;
 }
 .profileForm-section1 .info {
-  @apply text-xs text-[#4cceac];
+  @apply text-xs text-green1;
 }
 /* profileForm-section2 */
 .profileForm-section2 {
@@ -32,7 +32,7 @@
   @apply p-3 rounded-md outline-none w-full;
 }
 .profileForm-section2 .input {
-  @apply p-3 rounded-md outline-none w-full bg-[#2d3545] text-white;
+  @apply p-3 rounded-md outline-none w-full bg-lightGray dark:bg-gray3;
 }
 .profileForm-section2 .errWrapper {
   @apply text-red-600 h-1 p-1;
@@ -41,5 +41,5 @@
   @apply flex justify-end w-full;
 }
 .profileForm-section2 .submitBTN {
-  @apply flex justify-between items-center rounded-md p-3 text-xs bg-[#4cceac] text-black;
+  @apply flex justify-between items-center rounded-md p-3 text-xs bg-green1 text-black;
 }

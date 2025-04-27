@@ -13,7 +13,7 @@
   @apply flex justify-between items-center w-[20%] relative;
 }
 .header-section1 .search {
-  @apply rounded-md p-1 outline-none w-full bg-[#23293c] placeholder:text-xs placeholder:text-gray-400;
+  @apply rounded-md p-1 outline-none w-full dark:bg-blue2 bg-lightGray placeholder:text-xs placeholder:text-gray1;
 }
 .header-section1 .icon-btn {
   @apply flex justify-center items-center absolute right-3;

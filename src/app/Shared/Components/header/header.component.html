@@ -8,11 +8,11 @@
     </section>
     <section class="header-section2">
       @if(isDarkMode){
-      <button (click)="changeMode()">
+      <button (click)="toggleDarkMode()">
         <ng-icon name="solarMoon" class="icon" />
       </button>
       }@else {
-      <button (click)="changeMode()">
+      <button (click)="toggleDarkMode()">
         <ng-icon name="solarSun2" class="icon" />
       </button>
       }

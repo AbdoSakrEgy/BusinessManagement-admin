@@ -157,7 +157,11 @@
       </div>
       <div class="tableRow">
         @for (employee of dataForView; track $index) {
-        <div class="row" [style.padding.px]="rowPadding">
+        <div
+          class="row"
+          [style.paddingTop.px]="rowPadding"
+          [style.paddingBottom.px]="rowPadding"
+        >
           <div class="w-[5%] check" [hidden]="true">
             @if(selectedBoxes.includes(employee.id)){
             <ng-icon

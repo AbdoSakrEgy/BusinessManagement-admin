@@ -16,7 +16,7 @@
   @apply text-4xl font-bold;
 }
 .manageTeam-section1 .info {
-  @apply text-xs text-[#4cceac];
+  @apply text-xs text-green1;
 }
 /* manageTeam-section2 */
 .manageTeam-section2 {
@@ -27,17 +27,17 @@
 }
 /* manageTeam-section2 tableHeader*/
 .manageTeam-section2 .tableHeader {
-  @apply flex justify-between items-center px-5 py-3 rounded-t-sm w-full bg-[#6870fa] text-white;
+  @apply flex justify-between items-center px-5 py-3 rounded-t-sm w-full bg-blue3/50 dark:bg-blue3;
 }
 .manageTeam-section2 .tableHeader span {
   @apply flex justify-center items-center h-fit;
 }
 /* manageTeam-section2 tableRow*/
 .manageTeam-section2 .tableRow {
-  @apply flex flex-col h-[70%] overflow-auto bg-[#23293c];
+  @apply flex flex-col h-[70%]  scrollbar-thin scrollbar-thumb-gray2 scrollbar-track-gray1 overflow-auto bg-lightGray dark:bg-blue2;
 }
 .manageTeam-section2 .tableRow .row {
-  @apply flex justify-between items-center px-5 py-5 w-full border-b hover:bg-[#2d3545] border-gray-400 bg-inherit text-white;
+  @apply flex justify-between items-center px-5 py-5 w-full border-b hover:bg-gray1/50 dark:hover:bg-gray3 border-gray1;
 }
 .manageTeam-section2 .tableRow span {
   @apply flex justify-center items-center h-fit;
@@ -47,7 +47,7 @@
 }
 /* role culomn */
 .manageTeam-section2 .tableRow .roleStyle {
-  @apply flex justify-center items-center gap-3 text-lg rounded-md bg-[#4cceabb9];
+  @apply flex justify-center items-center gap-3 text-lg rounded-md bg-green1/50;
 }
 .manageTeam-section2 .tableRow .roleStyle ng-icon {
   @apply text-xl;
@@ -57,17 +57,17 @@
   @apply flex justify-between items-center;
 }
 .manageTeam-section2 .tableFooter .rowSelected {
-  @apply flex justify-start items-center pl-3 text-xs w-full h-full bg-[#6870fa];
+  @apply flex justify-start items-center pl-3 text-xs w-full h-full bg-blue3/50 dark:bg-blue3;
 }
 .manageTeam-section2 .tableFooter .footerControls {
-  @apply flex justify-end items-center gap-5 text-base px-5 py-3 rounded-b-sm w-full bg-[#6870fa] text-white;
+  @apply flex justify-end items-center gap-5 text-base px-5 py-3 rounded-b-sm w-full bg-blue3/50 dark:bg-blue3;
 }
 .manageTeam-section2 .tableFooter .title {
 }
 .manageTeam-section2 .tableFooter .pages {
 }
-.manageTeam-section2 .tableFooter .selectList {
-  @apply outline-none hover:cursor-pointer bg-[#6870fa];
+.selectList {
+  @apply outline-none hover:cursor-pointer bg-[#b3b8fc] dark:bg-blue3;
 }
 .manageTeam-section2 .tableFooter .pagesMap {
 }

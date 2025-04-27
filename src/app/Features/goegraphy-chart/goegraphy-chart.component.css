@@ -20,7 +20,7 @@
   @apply flex flex-col gap-3;
 }
 .geographyChart-section1 .welcome {
-  @apply text-xs text-[#4cceac];
+  @apply text-xs text-green1;
 }
 /* geographyChart-section2 */
 .geographyChart-section2 {

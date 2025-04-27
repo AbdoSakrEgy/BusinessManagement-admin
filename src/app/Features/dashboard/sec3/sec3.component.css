@@ -7,7 +7,7 @@
 }
 /* linechartSection */
 .dashboard-section3 .linechartSection {
-  @apply flex flex-col gap-3 p-5 w-[66.5%] h-60 bg-[#23293c];
+  @apply flex flex-col gap-3 p-5 w-[66.5%] h-60 bg-lightGray dark:bg-blue2;
 }
 .dashboard-section3 .linechartSection .head {
   @apply flex justify-between items-start w-full;
@@ -16,16 +16,15 @@
   @apply flex flex-col;
 }
 .dashboard-section3 .linechartSection .title {
-  @apply text-xs text-white;
+  @apply text-xs;
 }
 .dashboard-section3 .linechartSection .number {
-  @apply text-lg font-medium text-[#4cceac];
+  @apply text-lg font-medium text-green1;
 }
 .dashboard-section3 .linechartSection .download {
-  @apply text-2xl text-[#4cceac];
+  @apply text-2xl text-green1;
 }
 .dashboard-section3 .linechart {
-  @apply text-white;
 }
 ::ng-deep ngx-charts-line-chart .x.axis text {
   fill: white;
@@ -37,23 +36,40 @@
 
 /* transactions */
 .dashboard-section3 .transactions {
-  @apply flex flex-col gap-1 w-[33%] overflow-auto h-60;
+  @apply flex flex-col gap-1 w-[33%] overflow-auto h-60 scrollbar-thin scrollbar-thumb-gray2 scrollbar-track-gray1 overflow-y-scroll;
 }
 .dashboard-section3 .dataRow {
-  @apply flex justify-between items-center p-3 rounded-sm w-full bg-[#23293c];
+  @apply flex justify-between items-center p-3 rounded-sm w-full bg-lightGray dark:bg-blue2;
 }
 .dashboard-section3 .name {
   @apply flex flex-col;
 }
 .dashboard-section3 .name .code {
-  @apply text-[#4cceac];
+  @apply text-green1;
 }
 .dashboard-section3 .name .name {
-  @apply text-gray-400;
+  @apply text-gray1;
 }
 .dashboard-section3 .date {
-  @apply text-gray-400;
+  @apply text-gray1;
 }
 .dashboard-section3 .price {
-  @apply flex justify-center items-center p-2 rounded-md text-white bg-[#4cceac];
+  @apply flex justify-center items-center p-2 rounded-md text-white bg-green1;
+}
+
+::ng-deep ngx-charts-line-chart g.x.axis g.tick text {
+  fill: #9ca3af; /* X-axis numbers/words */
+  font-size: 14px;
+}
+
+::ng-deep ngx-charts-line-chart g.y.axis g.tick text {
+  fill: #9ca3af; /* Y-axis numbers/words */
+  font-size: 14px;
+}
+
+::ng-deep ngx-charts-line-chart text.x.axis-label,
+::ng-deep ngx-charts-line-chart text.y.axis-label {
+  fill: green; /* Axis labels ("Year", "Value") */
+  font-weight: bold;
+  font-size: 16px;
 }

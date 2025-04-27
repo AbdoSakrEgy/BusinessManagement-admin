@@ -7,19 +7,19 @@
 }
 /* statBlock */
 .dashboard-section2 .statBlock {
-  @apply flex justify-between items-stretch pb-5 pl-5 pt-1 pr-1 rounded-sm w-1/4 bg-[#23293c];
+  @apply flex justify-between items-stretch pb-5 pl-5 pt-1 pr-1 rounded-sm w-1/4 bg-lightGray dark:bg-blue2;
 }
 .dashboard-section2 .numBlock {
   @apply flex flex-col justify-end gap-1;
 }
 .dashboard-section2 .icon {
-  @apply text-xl text-[#4cceac];
+  @apply text-xl text-green1;
 }
 .dashboard-section2 .num {
   @apply text-sm;
 }
 .dashboard-section2 .title {
-  @apply text-xs text-[#4cceac];
+  @apply text-xs text-green1;
 }
 /* graphBlock */
 .dashboard-section2 .graphBlock {
@@ -29,5 +29,5 @@
   @apply flex;
 }
 .dashboard-section2 .ratio {
-  @apply text-xs text-center text-[#4cceac];
+  @apply text-xs text-center text-green1;
 }

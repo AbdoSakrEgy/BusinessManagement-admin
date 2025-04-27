@@ -25,7 +25,7 @@ export class PieChartComponent {
     name: 'customScheme',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#4cceac', '#db4f4a', '#C7B42C', '#9b59b6', '#d3c0f9', '#2ecc71'],
+    domain: ['#1E88E5', '#D32F2F', '#4cceac', '#C7B42C', '#d3c0f9', '#2ecc71'],
   };
 
   constructor(private store: Store) {

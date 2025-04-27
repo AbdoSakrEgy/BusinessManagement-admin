@@ -20,7 +20,7 @@
   @apply flex flex-col gap-3;
 }
 .lineChart-section1 .welcome {
-  @apply text-xs text-[#4cceac];
+  @apply text-xs text-green1;
 }
 /* lineChart-section2 */
 .lineChart-section2 {
@@ -32,4 +32,21 @@
 
 ::ng-deep ngx-charts-line-chart .y.axis text {
   fill: white;
+}
+
+::ng-deep ngx-charts-line-chart g.x.axis g.tick text {
+  fill: #9CA3AF; /* X-axis tick words (bottom numbers like years) */
+  font-size: 12px;
+}
+
+::ng-deep ngx-charts-line-chart g.y.axis g.tick text {
+  fill: #9CA3AF; /* Y-axis tick words (side numbers like values) */
+  font-size: 12px;
+}
+
+::ng-deep ngx-charts-line-chart text.x.axis-label,
+::ng-deep ngx-charts-line-chart text.y.axis-label {
+  fill: #3f51b5; /* Axis labels ("Year", "Sales", etc.) */
+  font-weight: bold;
+  font-size: 16px;
 }

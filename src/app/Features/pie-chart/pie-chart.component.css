@@ -20,14 +20,25 @@
   @apply flex flex-col gap-3;
 }
 .pieChart-section1 .welcome {
-  @apply text-xs text-[#4cceac];
+  @apply text-xs text-green1;
 }
 /* pieChart-section2 */
 .pieChart-section2 {
   @apply flex h-full;
 }
 ::ng-deep .pie-label {
-  fill: #ffffff; /* Replace with your desired label color */
+  fill: #9ca3af; /* Replace with your desired label color */
   font-size: 14px;
   font-weight: bold;
+}
+
+::ng-deep ngx-charts-pie-chart g.pie-label text {
+  fill: #9ca3af; /* Text inside the pie chart */
+  font-size: 14px;
+  font-weight: bold;
+}
+
+::ng-deep ngx-charts-pie-chart g.legend-label text {
+  fill: #4caf50; /* Text in the legend */
+  font-size: 14px;
 }

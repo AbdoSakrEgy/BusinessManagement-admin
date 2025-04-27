@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, signal } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { bootstrapSearch } from '@ng-icons/bootstrap-icons';
 import {
@@ -8,6 +8,7 @@ import {
   solarMoon,
   solarSun2,
 } from '@ng-icons/solar-icons/outline';
+import { ThemeService } from '../../../Core/Services/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -28,7 +29,16 @@ import {
 })
 export class HeaderComponent {
   isDarkMode = true;
-  changeMode() {
+
+  constructor(private themeService: ThemeService) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      this.themeService.enableDarkMode();
+    } else {
+      this.themeService.enableDarkMode(); // force dark mode no matter what
+    }
+  }
+  toggleDarkMode() {
+    this.themeService.toggleDarkMode();
     this.isDarkMode = !this.isDarkMode;
   }
 }
