@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navbar-container1 {
-  @apply flex justify-center items-center w-full h-[100vh] p-7 dark:bg-blue2 bg-lightGray;
+  @apply flex justify-center items-center w-full h-full p-7 dark:bg-blue2 bg-lightGray;
 }
 .navbar-container2 {
   @apply flex flex-col gap-10 w-full h-full;

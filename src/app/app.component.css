@@ -10,9 +10,9 @@
 }
 /* section1 */
 .section1 {
-  @apply w-[20%];
+  @apply w-[20%] h-full;
 }
 /* section2 */
 .section2 {
-  @apply flex flex-col w-[80%] h-screen scrollbar-thin scrollbar-thumb-gray2 scrollbar-track-gray1 overflow-auto;
+  @apply flex flex-col w-[80%] h-full;
 }
