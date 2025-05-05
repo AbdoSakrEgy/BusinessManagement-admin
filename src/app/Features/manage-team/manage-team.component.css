@@ -54,13 +54,13 @@
 }
 /* manageTeam-section2 tableFooter*/
 .manageTeam-section2 .tableFooter {
-  @apply flex justify-between items-center;
+  @apply flex justify-between items-center bg-blue3/50 dark:bg-blue3;
 }
 .manageTeam-section2 .tableFooter .rowSelected {
-  @apply flex justify-start items-center pl-3 text-xs w-full h-full bg-blue3/50 dark:bg-blue3;
+  @apply flex justify-start items-center pl-3 text-xs w-full;
 }
 .manageTeam-section2 .tableFooter .footerControls {
-  @apply flex justify-end items-center gap-5 text-base px-5 py-3 rounded-b-sm w-full bg-blue3/50 dark:bg-blue3;
+  @apply flex justify-end items-center gap-5 text-base px-5 py-3 rounded-b-sm w-full;
 }
 .manageTeam-section2 .tableFooter .title {
 }

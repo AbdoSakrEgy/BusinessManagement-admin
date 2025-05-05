@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 .container1 {
-  @apply flex justify-center items-center w-full flex-1 bg-white dark:bg-blue1;
+  @apply flex justify-center items-center w-full h-screen bg-white dark:bg-blue1;
 }
 .container2 {
-  @apply flex justify-between items-start w-full h-full text-black dark:text-white;
+  @apply flex justify-between items-stretch w-full h-screen text-black dark:text-white;
 }
 /* section1 */
 .section1 {
-  @apply w-[20%] h-full;
+  @apply w-[20%];
 }
 /* section2 */
 .section2 {
-  @apply flex flex-col w-[80%] h-full;
+  @apply flex flex-col w-[80%];
 }
