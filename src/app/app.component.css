@@ -14,5 +14,5 @@
 }
 /* section2 */
 .section2 {
-  @apply flex flex-col w-[80%] h-fit;
+  @apply flex flex-col w-[80%] h-screen;
 }
