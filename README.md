@@ -6,7 +6,7 @@ Welcome to the **Business Management Admin** panel! This Angular-based admin das
 
 You can explore the live demo of the Business Management Admin panel by visiting the following link:
 
-[**Business Management Admin - Live Demo**](https://businessmanagement-admin.netlify.app/)
+[**Business Management Admin - Live Demo**](https://business-management-admin.vercel.app/dashboard)
 
 Check it out to see the application in action!
 
