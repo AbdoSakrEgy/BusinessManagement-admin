@@ -1,30 +1,28 @@
-<main class="header-container1">
-  <main class="header-container2">
-    <section class="header-section1">
-      <input type="text" placeholder="Search" class="search" />
-      <button class="icon-btn">
-        <ng-icon name="bootstrapSearch" />
-      </button>
-    </section>
-    <section class="header-section2">
-      @if(isDarkMode){
-      <button (click)="toggleDarkMode()">
-        <ng-icon name="solarMoon" class="icon" />
-      </button>
-      }@else {
-      <button (click)="toggleDarkMode()">
-        <ng-icon name="solarSun2" class="icon" />
-      </button>
-      }
-      <button>
-        <ng-icon name="solarBell" class="icon" />
-      </button>
-      <button>
-        <ng-icon name="solarSettings" class="icon" />
-      </button>
-      <button>
-        <ng-icon name="solarUser" class="icon" />
-      </button>
-    </section>
-  </main>
+<main class="header-container">
+  <section class="header-section1">
+    <input type="text" placeholder="Search" class="search" />
+    <button class="icon-btn">
+      <ng-icon name="bootstrapSearch" />
+    </button>
+  </section>
+  <section class="header-section2">
+    @if(isDarkMode){
+    <button (click)="toggleDarkMode()">
+      <ng-icon name="solarMoon" class="icon" />
+    </button>
+    }@else {
+    <button (click)="toggleDarkMode()">
+      <ng-icon name="solarSun2" class="icon" />
+    </button>
+    }
+    <button>
+      <ng-icon name="solarBell" class="icon" />
+    </button>
+    <button>
+      <ng-icon name="solarSettings" class="icon" />
+    </button>
+    <button>
+      <ng-icon name="solarUser" class="icon" />
+    </button>
+  </section>
 </main>

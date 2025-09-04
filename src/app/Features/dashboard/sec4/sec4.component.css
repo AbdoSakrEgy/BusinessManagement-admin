@@ -2,14 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* mobile screens */
 .dashboard-section4 {
-  @apply flex justify-between items-stretch flex-wrap w-full h-full gap-1;
+  @apply flex justify-between items-stretch flex-wrap w-full h-full gap-5;
 }
 /* barChart */
 .dashboard-section4 .barChart {
-  @apply w-[33%] bg-lightGray dark:bg-blue2;
+  @apply w-full bg-lightGray dark:bg-blue2;
 }
 /* geogChart */
 .dashboard-section4 .geogChart {
-  @apply w-[66.5%] bg-lightGray dark:bg-blue2;
+  @apply w-full bg-lightGray dark:bg-blue2;
+}
+
+/* desktop screens */
+@media only screen and (min-width: 992px) {
+  .dashboard-section4 {
+    @apply flex-nowrap;
+  }
+  .dashboard-section4 .barChart {
+    @apply w-1/2;
+  }
+  .dashboard-section4 .geogChart {
+    @apply w-1/2;
+  }
 }

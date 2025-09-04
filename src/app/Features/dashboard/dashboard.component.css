@@ -6,11 +6,11 @@
   @apply flex justify-center items-center w-full h-full p-3;
 }
 .dashboard-container2 {
-  @apply flex flex-col gap-3 w-full h-full;
+  @apply flex flex-col gap-5 w-full h-full;
 }
 /* dashboard-section1 */
 .dashboard-section1 {
-  @apply flex justify-between items-end w-full h-fit;
+  @apply flex justify-between items-end flex-wrap w-full h-fit;
 }
 .dashboard-section1 .msg {
   @apply flex flex-col gap-3;
@@ -22,7 +22,7 @@
   @apply text-xs text-green1;
 }
 .dashboard-section1 .DWReports {
-  @apply flex justify-center items-center gap-2 px-5 py-2 rounded-sm text-sm bg-blue3/40 dark:bg-blue3;
+  @apply flex justify-center items-center gap-2 px-5 py-2 mt-5 rounded-sm text-sm bg-blue3/40 dark:bg-blue3;
 }
 /* dashboard-section2 */
 /* dashboard-section3 */

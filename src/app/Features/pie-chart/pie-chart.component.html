@@ -8,10 +8,11 @@
     </section>
     <div class="pieChart-section2">
       <ngx-charts-pie-chart
+        [view]="view"
         [scheme]="colorScheme"
         [results]="single"
         [gradient]="true"
-        [legend]="true"
+        [legend]="false"
         [labels]="true"
         [doughnut]="true"
         [arcWidth]="0.55"

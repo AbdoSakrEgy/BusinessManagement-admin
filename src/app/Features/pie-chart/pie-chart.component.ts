@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { Color, ScaleType } from '@swimlane/ngx-charts';
 import { Store } from '@ngrx/store';
@@ -12,12 +12,12 @@ import { selectPieData } from '../../Store/Selectors/pie.selectors';
   templateUrl: './pie-chart.component.html',
   styleUrl: './pie-chart.component.css',
 })
-export class PieChartComponent {
+export class PieChartComponent implements OnInit, OnDestroy {
   single: any[] = [];
   data$ = this.store.select(selectPieData).subscribe((result) => {
     this.single = result;
   });
-  view: any[] = [700, 400];
+  view: [number, number] = [700, 400];
 
   // options
   legendPosition: any = 'below';
@@ -32,6 +32,22 @@ export class PieChartComponent {
     Object.assign(this, {
       data: this.data$,
     });
+  }
+
+  ngOnInit() {
+    this.updateChartSize();
+    window.addEventListener('resize', this.updateChartSize.bind(this));
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('resize', this.updateChartSize.bind(this));
+  }
+
+  private updateChartSize() {
+    const container = document.querySelector('.pieChart-section2');
+    if (container) {
+      this.view = [container.clientWidth, container.clientHeight];
+    }
   }
 
   onSelect(data: any): void {

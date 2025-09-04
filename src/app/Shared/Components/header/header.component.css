@@ -2,15 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.header-container1 {
-  @apply flex justify-center items-center p-3 w-full h-full;
-}
-.header-container2 {
-  @apply flex justify-between items-center w-full h-full;
+/* mobile screens */
+.header-container {
+  @apply flex justify-between items-center p-3 w-full;
 }
 /* header-section1 */
 .header-section1 {
-  @apply flex justify-between items-center w-[20%] relative;
+  @apply flex justify-between items-center relative;
 }
 .header-section1 .search {
   @apply rounded-md p-1 outline-none w-full dark:bg-blue2 bg-lightGray placeholder:text-xs placeholder:text-gray1;
@@ -20,8 +18,11 @@
 }
 /* header-section2 */
 .header-section2 {
-  @apply flex justify-end items-center gap-3 w-[20%];
+  @apply flex justify-end items-center gap-3;
 }
 .header-section2 .icon {
   @apply hover:cursor-pointer;
+}
+/* desktop screens */
+@media only screen and (min-width: 992px) {
 }

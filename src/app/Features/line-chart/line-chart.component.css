@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 .lineChart-container1 {
-  @apply flex justify-center items-center w-full h-[90%] p-3;
+  @apply flex justify-center items-center w-full h-full p-3;
 }
+
 .lineChart-container2 {
   @apply flex flex-col w-full h-full gap-5;
 }
@@ -24,8 +25,9 @@
 }
 /* lineChart-section2 */
 .lineChart-section2 {
-  @apply flex h-full;
+  @apply flex flex-1 w-full h-full min-h-[500px];
 }
+
 ::ng-deep ngx-charts-line-chart .x.axis text {
   fill: white;
 }
@@ -35,12 +37,12 @@
 }
 
 ::ng-deep ngx-charts-line-chart g.x.axis g.tick text {
-  fill: #9CA3AF; /* X-axis tick words (bottom numbers like years) */
+  fill: #9ca3af; /* X-axis tick words (bottom numbers like years) */
   font-size: 12px;
 }
 
 ::ng-deep ngx-charts-line-chart g.y.axis g.tick text {
-  fill: #9CA3AF; /* Y-axis tick words (side numbers like values) */
+  fill: #9ca3af; /* Y-axis tick words (side numbers like values) */
   font-size: 12px;
 }
 
@@ -49,4 +51,9 @@
   fill: #3f51b5; /* Axis labels ("Year", "Sales", etc.) */
   font-weight: bold;
   font-size: 16px;
+}
+
+/* Make chart responsive */
+:host ::ng-deep ngx-charts-line-chart {
+  @apply w-full h-full;
 }

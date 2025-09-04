@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* mobile screens */
 .profileForm-container1 {
   @apply flex justify-center items-center w-full h-full p-3;
 }
@@ -26,7 +27,7 @@
   @apply w-full;
 }
 .profileForm-section2 .nameForm {
-  @apply flex justify-between items-center gap-5 w-full;
+  @apply flex flex-col w-full;
 }
 .profileForm-section2 .inputWrapper {
   @apply p-3 rounded-md outline-none w-full;
@@ -41,5 +42,15 @@
   @apply flex justify-end w-full;
 }
 .profileForm-section2 .submitBTN {
-  @apply flex justify-between items-center rounded-md p-3 text-xs bg-green1 text-black;
+  @apply flex justify-center items-center w-full rounded-md p-3 mt-3 text-xs bg-green1 text-white;
+}
+
+/* desktop screen */
+@media only screen and (min-width: 992px) {
+  .profileForm-section2 .nameForm {
+    @apply flex flex-row justify-between items-center gap-5 w-full;
+  }
+  .profileForm-section2 .submitBTN {
+    @apply w-auto;
+  }
 }

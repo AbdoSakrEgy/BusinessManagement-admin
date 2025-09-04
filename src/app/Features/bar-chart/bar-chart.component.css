@@ -3,10 +3,20 @@
 @tailwind utilities;
 
 .barChart-container1 {
-  @apply flex justify-center items-center w-full h-[95%] p-3;
+  @apply flex justify-center items-center w-full h-full p-3;
 }
+
 .barChart-container2 {
-  @apply flex flex-col w-full h-full gap-5;
+  @apply flex flex-col gap-5 w-full h-full;
+}
+
+.barChart-section2 {
+  @apply flex-1 w-full h-full min-h-[500px];
+}
+
+/* Make chart responsive */
+:host ::ng-deep ngx-charts-bar-vertical-stacked {
+  @apply w-full h-full;
 }
 
 /* barChart-section1 */

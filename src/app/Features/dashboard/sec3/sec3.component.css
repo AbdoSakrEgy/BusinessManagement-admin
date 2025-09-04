@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* mobile screens */
 .dashboard-section3 {
-  @apply flex justify-between items-start w-full h-fit text-xs;
+  @apply flex justify-between items-stretch flex-wrap w-full h-full gap-5;
 }
 /* linechartSection */
 .dashboard-section3 .linechartSection {
-  @apply flex flex-col gap-3 p-5 w-[66.5%] h-60 bg-lightGray dark:bg-blue2;
+  @apply flex flex-col gap-3 p-5 h-60 w-full bg-lightGray dark:bg-blue2;
 }
 .dashboard-section3 .linechartSection .head {
   @apply flex justify-between items-start w-full;
@@ -36,7 +37,7 @@
 
 /* transactions */
 .dashboard-section3 .transactions {
-  @apply flex flex-col gap-1 w-[33%] overflow-auto h-60 scrollbar-thin scrollbar-thumb-gray2 scrollbar-track-gray1 overflow-y-scroll;
+  @apply flex flex-col gap-1 overflow-auto h-60 w-full scrollbar-thin scrollbar-thumb-gray2 scrollbar-track-gray1 overflow-y-scroll;
 }
 .dashboard-section3 .dataRow {
   @apply flex justify-between items-center p-3 rounded-sm w-full bg-lightGray dark:bg-blue2;
@@ -72,4 +73,17 @@
   fill: green; /* Axis labels ("Year", "Value") */
   font-weight: bold;
   font-size: 16px;
+}
+
+/* desktop screens */
+@media only screen and (min-width: 992px) {
+  .dashboard-section3 {
+    @apply flex-nowrap;
+  }
+  .dashboard-section3 .linechartSection {
+    @apply w-1/2;
+  }
+  .dashboard-section3 .transactions {
+    @apply w-1/2;
+  }
 }

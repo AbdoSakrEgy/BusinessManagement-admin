@@ -2,17 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* mobile screens */
 .container1 {
-  @apply flex justify-center items-center w-full h-screen overflow-auto bg-white dark:bg-blue1;
+  @apply flex justify-center items-center w-full bg-white dark:bg-blue1 whitespace-nowrap;
 }
 .container2 {
-  @apply flex justify-between items-stretch w-full h-screen text-black dark:text-white;
+  @apply flex justify-between items-stretch w-full text-black dark:text-white;
 }
-/* section1 */
-.section1 {
-  @apply w-[20%] h-fit;
+/* right-section */
+.right-section {
+  @apply flex flex-col flex-grow min-h-screen overflow-auto;
 }
-/* section2 */
-.section2 {
-  @apply flex flex-col w-[80%] h-screen;
+
+/* desktop screens */
+@media only screen and (min-width: 992px) {
 }
