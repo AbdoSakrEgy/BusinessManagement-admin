@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { bootstrapList, bootstrapPersonVcard } from '@ng-icons/bootstrap-icons';
+import {
+  bootstrapList,
+  bootstrapPersonVcard,
+  bootstrapXLg,
+} from '@ng-icons/bootstrap-icons';
 import {
   solarHome,
   solarUsersGroupRounded,
@@ -35,7 +39,15 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       solarPieChart,
       solarCourseUp,
       solarMap,
+      bootstrapXLg,
     }),
   ],
 })
-export class NavBarComponent {}
+export class NavBarComponent {
+  closeNavbar() {
+    const navbar = document.getElementsByClassName(
+      'navbar-container1'
+    )[0] as HTMLElement;
+    navbar.style.display = 'none';
+  }
+}

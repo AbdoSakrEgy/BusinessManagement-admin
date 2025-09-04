@@ -10,6 +10,9 @@
 .header-section1 {
   @apply flex justify-between items-center relative;
 }
+.list {
+  @apply text-4xl hover:cursor-pointer;
+}
 .header-section1 .search {
   @apply rounded-md p-1 outline-none w-full dark:bg-blue2 bg-lightGray placeholder:text-xs placeholder:text-gray1;
 }
@@ -25,4 +28,7 @@
 }
 /* desktop screens */
 @media only screen and (min-width: 992px) {
+  .list {
+    @apply hidden;
+  }
 }

@@ -1,6 +1,6 @@
 import { Component, HostBinding, signal } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { bootstrapSearch } from '@ng-icons/bootstrap-icons';
+import { bootstrapSearch, bootstrapList } from '@ng-icons/bootstrap-icons';
 import {
   solarUser,
   solarSettings,
@@ -24,6 +24,7 @@ import { ThemeService } from '../../../Core/Services/theme.service';
       solarBell,
       solarMoon,
       solarSun2,
+      bootstrapList,
     }),
   ],
 })
@@ -40,5 +41,11 @@ export class HeaderComponent {
   toggleDarkMode() {
     this.themeService.toggleDarkMode();
     this.isDarkMode = !this.isDarkMode;
+  }
+  showNavbar() {
+    const navbar = document.getElementsByClassName(
+      'navbar-container1'
+    )[0] as HTMLElement;
+    navbar.style.display = 'flex';
   }
 }
