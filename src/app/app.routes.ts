@@ -24,6 +24,7 @@ export const routes: Routes = [
   { path: 'manage-team', component: ManageTeamComponent },
   { path: 'pie-chart', component: PieChartComponent },
   { path: 'profile-form', component: ProfileFormComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', component: DashboardComponent },
+  // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
